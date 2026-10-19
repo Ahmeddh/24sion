@@ -1,0 +1,60 @@
+/* ═══════════════════════════════════════════════════════════════
+   Motion Design Tokens — djobs.net
+   Single source of truth for all animation values.
+   Mirrored in JS at lib/motion/tokens.ts
+═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Duration ───────────────────────────────────────────────
+     fast   → micro (hover, tap, focus ring)
+     base   → standard UI (buttons, tabs, inputs)
+     medium → layout shifts, card reveals, expansions
+     slow   → section transitions, diagram focus shifts      */
+  --motion-fast:   120ms;
+  --motion-base:   180ms;
+  --motion-medium: 260ms;
+  --motion-slow:   360ms;
+
+  /* ── Easing ─────────────────────────────────────────────────
+     out-soft  → default exit / UI response (decelerates)
+     in-soft   → enter with gentle acceleration
+     in-out    → balanced toggle / tab transitions
+     spring    → interactive focus, slight overshoot, settles  */
+  --ease-out-soft: cubic-bezier(0.2, 0, 0, 1);
+  --ease-in-soft:  cubic-bezier(0.4, 0, 1, 1);
+  --ease-in-out:   cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring:   cubic-bezier(0.34, 1.08, 0.64, 1);
+
+  /* ── Scale ──────────────────────────────────────────────────
+     Only ONE scale level active at a time (hierarchy rule)   */
+  --scale-hover:  1.02;
+  --scale-focus:  1.06;
+  --scale-active: 0.98;
+
+  /* ── Opacity ────────────────────────────────────────────────*/
+  --opacity-dim:   0.4;
+  --opacity-muted: 0.6;
+  --opacity-full:  1;
+
+  /* ── Elevation (box-shadow) ─────────────────────────────────*/
+  --elevation-rest:  none;
+  --elevation-hover: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --elevation-focus: 0 8px 36px rgba(0, 0, 0, 0.55);
+}
+
+/* ── Reduced-motion overrides ─────────────────────────────────
+   Zero all durations; spring becomes linear.
+   Components using JS tokens must also call useReducedMotion(). */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-fast:   0ms;
+    --motion-base:   0ms;
+    --motion-medium: 0ms;
+    --motion-slow:   0ms;
+    --ease-spring:   linear;
+    --scale-hover:   1;
+    --scale-focus:   1;
+    --scale-active:  1;
+  }
+  .marquee-track { animation: none !important; }
+}

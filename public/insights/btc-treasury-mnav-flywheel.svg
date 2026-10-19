@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="430" viewBox="0 0 960 430" role="img" aria-label="The mNAV flywheel and its reverse">
+  <defs>
+    <marker id="arrGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#00ffaa"/>
+    </marker>
+    <marker id="arrAmber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ffb340"/>
+    </marker>
+    <style>
+      .t  { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+      .m  { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .hd { font-size: 13px; letter-spacing: 2.2px; text-transform: uppercase; }
+      .bt { font-size: 13.5px; font-weight: 700; }
+      .bb { font-size: 11.5px; fill: #9898b8; }
+      .ctr{ font-size: 15px; font-weight: 700; letter-spacing: 0.5px; }
+      .ft { font-size: 11px; fill: #5a5a7a; }
+    </style>
+  </defs>
+
+  <rect width="960" height="430" fill="#0e0e1c"/>
+  <line x1="480" y1="24" x2="480" y2="406" stroke="#20203a" stroke-width="1"/>
+
+  <!-- ── LEFT: accretive ─────────────────────────────── -->
+  <text class="t hd" x="30" y="44" fill="#00ffaa">The flywheel</text>
+
+  <rect x="30"  y="80"  width="190" height="76" rx="10" fill="#00ffaa" fill-opacity="0.06" stroke="#00ffaa" stroke-opacity="0.3"/>
+  <text class="t bt" x="46" y="108" fill="#f0f0fa">Premium</text>
+  <text class="t bb" x="46" y="127">Stock trades above the</text>
+  <text class="t bb" x="46" y="142">bitcoin it already holds</text>
+
+  <rect x="260" y="80"  width="190" height="76" rx="10" fill="#00ffaa" fill-opacity="0.06" stroke="#00ffaa" stroke-opacity="0.3"/>
+  <text class="t bt" x="276" y="108" fill="#f0f0fa">Issue</text>
+  <text class="t bb" x="276" y="127">Sell new shares into</text>
+  <text class="t bb" x="276" y="142">that premium</text>
+
+  <rect x="260" y="250" width="190" height="76" rx="10" fill="#00ffaa" fill-opacity="0.06" stroke="#00ffaa" stroke-opacity="0.3"/>
+  <text class="t bt" x="276" y="278" fill="#f0f0fa">Buy</text>
+  <text class="t bb" x="276" y="297">Turn the proceeds into</text>
+  <text class="t bb" x="276" y="312">more bitcoin</text>
+
+  <rect x="30"  y="250" width="190" height="76" rx="10" fill="#00ffaa" fill-opacity="0.06" stroke="#00ffaa" stroke-opacity="0.3"/>
+  <text class="t bt" x="46" y="278" fill="#f0f0fa">BTC per share rises</text>
+  <text class="t bb" x="46" y="297">The premium looks</text>
+  <text class="t bb" x="46" y="312">justified, so it holds</text>
+
+  <path d="M 224 118 L 252 118" stroke="#00ffaa" stroke-width="1.6" marker-end="url(#arrGreen)"/>
+  <path d="M 355 160 L 355 244" stroke="#00ffaa" stroke-width="1.6" marker-end="url(#arrGreen)"/>
+  <path d="M 256 288 L 228 288" stroke="#00ffaa" stroke-width="1.6" marker-end="url(#arrGreen)"/>
+  <path d="M 125 244 L 125 160" stroke="#00ffaa" stroke-width="1.6" marker-end="url(#arrGreen)"/>
+
+  <text class="m ctr" x="240" y="197" fill="#00ffaa" text-anchor="middle">mNAV above 1.0</text>
+  <text class="t ft" x="240" y="217" fill="#5a5a7a" text-anchor="middle">Dilution that enriches</text>
+
+  <!-- ── RIGHT: reflexive ────────────────────────────── -->
+  <text class="t hd" x="510" y="44" fill="#ffb340">The same loop, reversed</text>
+
+  <rect x="510" y="80"  width="190" height="76" rx="10" fill="#ffb340" fill-opacity="0.06" stroke="#ffb340" stroke-opacity="0.32"/>
+  <text class="t bt" x="526" y="108" fill="#f0f0fa">Discount</text>
+  <text class="t bb" x="526" y="127">Stock trades below the</text>
+  <text class="t bb" x="526" y="142">bitcoin it already holds</text>
+
+  <rect x="740" y="80"  width="190" height="76" rx="10" fill="#ffb340" fill-opacity="0.06" stroke="#ffb340" stroke-opacity="0.32"/>
+  <text class="t bt" x="756" y="108" fill="#f0f0fa">Issuance stops</text>
+  <text class="t bb" x="756" y="127">New shares would now</text>
+  <text class="t bb" x="756" y="142">cut BTC per share</text>
+
+  <rect x="740" y="250" width="190" height="76" rx="10" fill="#ffb340" fill-opacity="0.06" stroke="#ffb340" stroke-opacity="0.32"/>
+  <text class="t bt" x="756" y="278" fill="#f0f0fa">The bills arrive</text>
+  <text class="t bb" x="756" y="297">Interest and preferred</text>
+  <text class="t bb" x="756" y="312">dividends, paid in dollars</text>
+
+  <rect x="510" y="250" width="190" height="76" rx="10" fill="#ff6b81" fill-opacity="0.07" stroke="#ff6b81" stroke-opacity="0.35"/>
+  <text class="t bt" x="526" y="278" fill="#f0f0fa">Sell bitcoin</text>
+  <text class="t bb" x="526" y="297">Into a market that is</text>
+  <text class="t bb" x="526" y="312">already falling</text>
+
+  <path d="M 704 118 L 732 118" stroke="#ffb340" stroke-width="1.6" marker-end="url(#arrAmber)"/>
+  <path d="M 835 160 L 835 244" stroke="#ffb340" stroke-width="1.6" marker-end="url(#arrAmber)"/>
+  <path d="M 736 288 L 708 288" stroke="#ffb340" stroke-width="1.6" marker-end="url(#arrAmber)"/>
+  <path d="M 605 244 L 605 160" stroke="#ffb340" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arrAmber)"/>
+
+  <text class="m ctr" x="720" y="197" fill="#ffb340" text-anchor="middle">mNAV below 1.0</text>
+  <text class="t ft" x="720" y="217" fill="#5a5a7a" text-anchor="middle">Dilution that destroys</text>
+
+  <text class="t ft" x="30"  y="396">No margin call is required. Every step is a rational, voluntary decision.</text>
+  <text class="t ft" x="930" y="396" text-anchor="end">Selling pressure lands during drawdowns, not rallies.</text>
+</svg>

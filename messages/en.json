@@ -1,0 +1,567 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "insights": "Insights",
+    "projects": "Projects",
+    "contact": "Contact",
+    "bookSession": "Book a Consultation"
+  },
+  "home": {
+    "badge": "Cybersecurity Advisor · Product Strategist · Blockchain Advisor",
+    "heroLine1": "Product. Security.",
+    "heroLine2": "Blockchain.",
+    "heroLine3": "Enterprise-Grade.",
+    "heroSub": "15+ years architecting secure digital systems at national scale, from Sudan's digital payments infrastructure to US government healthcare identity networks. I help enterprises navigate the intersection of product delivery, cybersecurity leadership, and blockchain architecture.",
+    "ctaPrimary": "Book a Consultation",
+    "ctaSecondary": "Explore Services",
+    "chips": ["Cybersecurity Advisory", "Blockchain Architecture", "Enterprise Product Strategy", "Digital Transformation", "Web3 Advisory"],
+    "statsLabel0": "Years of Enterprise Delivery",
+    "statsLabel1": "Projects Delivered",
+    "statsLabel2": "Core Practice Areas",
+    "statsLabel3": "Commitment to Security",
+    "proofLabel": "Verified at Scale",
+    "proofTitle": "Proof of Delivery",
+    "proofSub": "Selected engagements where outcomes were measured, not estimated.",
+    "proofItems": [
+      {
+        "stat": "~69%",
+        "label": "Sudan Online Payment Volume",
+        "detail": "ShoogirCash processed approximately 69% of Sudan's online payment transactions in 2015–16, integrated directly with the Central Bank of Sudan settlement API.",
+        "tag": "National Fintech Infrastructure"
+      },
+      {
+        "stat": "PETRONAS",
+        "label": "Enterprise Fuel eCoupon System",
+        "detail": "Designed the PETRONAS national fuel eCoupon platform: closed-loop prepaid coupon infrastructure serving corporate clients and station agents across the national network.",
+        "tag": "Enterprise / Fraud Prevention"
+      },
+      {
+        "stat": "60K+",
+        "label": "UN Peacekeeping Vehicles Tracked",
+        "detail": "Designed the fuel distribution infrastructure for the UNAMID peacekeeping mission in Darfur: 60,000 vehicles, 14,000 generators, and 140 aircraft tracked across 15 stations with offline-first architecture built for zero-connectivity field operations.",
+        "tag": "Mission-Critical Infrastructure"
+      }
+    ],
+    "servicesLabel": "Practice Areas",
+    "servicesTitle": "How I Work With You",
+    "servicesSub": "Four disciplines. One consultant. Delivered as fractional advisory, fixed-scope engagements, or embedded retainers.",
+    "learnMore": "Learn more →",
+    "viewAllServices": "View All Services",
+    "aboutLabel": "Who I Am",
+    "aboutHeadlinePre": "A consultant operating at the intersection of",
+    "aboutHeadlineSecurity": "security",
+    "aboutHeadlineAnd": "product, and",
+    "aboutHeadlineProduct": "blockchain",
+    "aboutP1": "I'm Ahmed Djobs, Co-Founder of Zero Bytes cybersecurity and Principal Consultant at djobs.net. With 15+ years across fintech, government, and enterprise systems, I bring senior security leadership, product strategy, and production-grade blockchain architecture into a single engagement.",
+    "aboutP2": "I've led systems that processed the majority of a country's online payments, designed fraud-resistant infrastructure for a Fortune 500 energy company, and architected US government healthcare identity networks using Hyperledger Fabric. My engagements are evidence-based, outcome-focused, and built for enterprise accountability.",
+    "aboutCTA": "Full Background",
+    "expertiseLabel": "Core Competencies",
+    "insightsLabel": "Authority Perspectives",
+    "insightsTitle": "Latest Insights",
+    "allArticles": "All Articles",
+    "readArticle": "Read article →",
+    "readMin": "min",
+    "read": "read",
+    "ctaBandLabel": "Start Here",
+    "ctaBandTitle": "Book a Discovery Session.",
+    "ctaBandSub": "Enterprise security program. Blockchain architecture. Product delivery at scale. Book a 30-minute discovery session: no sales pitch, no generic proposal. Just a direct conversation about your challenge and whether I'm the right fit.",
+    "sendEmail": "Send an Email",
+    "svcBadgeWebmobile": "Product",
+    "svcBadgeDigital": "Transformation",
+    "svcBadgeCybersecurity": "Cybersecurity",
+    "svcBadgeBlockchain": "Blockchain",
+    "svcCards": [
+      {
+        "id": "digital",
+        "title": "Enterprise Digital Transformation",
+        "tagline": "System Modernisation with Security and Scalability Built In",
+        "description": "Digital transformation fails when it treats architecture as an afterthought. I work with leadership teams to define transformation scope, sequence modernisation, design the target architecture, and build organisational alignment, with security embedded from the first decision rather than added at the end."
+      },
+      {
+        "id": "webmobile",
+        "title": "Digital Product Strategy & Delivery",
+        "tagline": "Senior Product Leadership for Enterprise-Scale Systems",
+        "description": "Complex digital products at the intersection of security and consumer experience require a product leader who can translate engineering constraints into business outcomes. I provide senior delivery leadership: technical roadmaps, sprint coordination, vendor oversight, and stakeholder alignment from concept to launch."
+      },
+      {
+        "id": "cybersecurity",
+        "title": "Cybersecurity Consulting & Security Leadership",
+        "tagline": "Senior Security Advisory for Enterprises and Regulated Industries",
+        "description": "Most organisations need senior security leadership well before they can justify a full-time hire. I embed as your dedicated security advisor: defining governance frameworks, owning the risk register, designing secure architecture, and driving compliance readiness, while your team stays focused on delivery."
+      },
+      {
+        "id": "blockchain",
+        "title": "Blockchain & Web3 Architecture Advisory",
+        "tagline": "Enterprise Blockchain Strategy, Identity Systems & Smart Contracts",
+        "description": "The gap between blockchain's promise and failed enterprise implementations is almost always strategic, not technical. I guide organisations from feasibility through production architecture: Hyperledger Fabric, SSI identity systems, smart contract design, tokenomics, and Web3 product strategy grounded in what works."
+      }
+    ],
+    "insightCards": [
+      {
+        "slug": "ciso-fractional",
+        "tag": "Cybersecurity",
+        "tagColor": "cyan",
+        "title": "Why Your Startup Needs a Fractional CISO (Not Just a Security Checklist)",
+        "excerpt": "A compliance checklist tells you what to check. A dedicated security leader tells you what actually matters and what a breach would cost your business.",
+        "readMin": 8
+      },
+      {
+        "slug": "zero-trust-architecture",
+        "tag": "Cybersecurity",
+        "tagColor": "cyan",
+        "title": "Zero Trust Architecture: Why Perimeter Security Is Dead",
+        "excerpt": "Modern threat landscapes have made perimeter-based security obsolete. Here's how Zero Trust principles rebuild your defensive posture from first principles.",
+        "readMin": 7
+      },
+      {
+        "slug": "blockchain-enterprise-myths",
+        "tag": "Blockchain",
+        "tagColor": "purple",
+        "title": "The 5 Blockchain Enterprise Myths That Are Costing You Deals",
+        "excerpt": "Misaligned expectations about what blockchain can and cannot do have derailed countless enterprise initiatives. Here's what the architecture actually demands.",
+        "readMin": 9
+      }
+    ],
+    "expertiseItems": [
+      {"label": "Cybersecurity Advisory & Security Governance"},
+      {"label": "Hyperledger Fabric & SSI Architecture"},
+      {"label": "Threat Modelling & Risk Assessment"},
+      {"label": "Web3 Product Strategy & Tokenomics"},
+      {"label": "Enterprise Product Delivery & Roadmaps"},
+      {"label": "Compliance: ISO 27001 · SOC 2 · HIPAA · PCI-DSS"}
+    ]
+  },
+  "about": {
+    "heroLabel": "About",
+    "whoIAm": "Professional Identity",
+    "tagline": "Technical Product Strategist · Cybersecurity Advisor · Blockchain Advisor",
+    "heroP1": "15 years of senior delivery across national fintech infrastructure, US government identity systems, and enterprise blockchain architecture. I don't advise on systems theoretically. I've built them at scale, in regulated environments, where the cost of failure was measured in national impact.",
+    "heroP2": "Today I operate as Co-Founder of Zero Bytes cybersecurity and Principal Consultant at djobs.net, partnering with enterprise organisations, regulated businesses, and government-adjacent programmes that need CISO-level security thinking, senior product strategy, and production-grade blockchain architecture in a single engagement.",
+    "getInTouch": "Book a Consultation",
+    "philosophyLabel": "Approach",
+    "philosophyTitle": "How I Work",
+    "philosophyQuote": "\"The best technical advice is also the most honest advice. Even when it means telling a client what they don't want to hear.\"",
+    "philosophySub": "I work from evidence, not assumptions. Every engagement starts with an honest assessment of the real risk, the actual constraints, and the outcomes that matter. No frameworks applied for their own sake. No recommendations that serve the consultant more than the client.",
+    "expertiseTag": "Technical Depth",
+    "skillsTitle": "Technical Competencies",
+    "journeyTag": "Career",
+    "timelineTitle": "Professional Experience",
+    "credentialsTag": "Credentials",
+    "educationTitle": "Education & Training",
+    "licensesTag": "Certifications",
+    "certificationsTitle": "Certifications & Licences",
+    "ctaLabel": "Next Step",
+    "ctaTag": "Work Together",
+    "ctaTitle": "Book a Discovery Session",
+    "ctaSub": "A 30-minute conversation about your challenge: security program, blockchain architecture, product delivery, or digital transformation. Direct, no-obligation, and structured around your specific situation.",
+    "viewServices": "View Services",
+    "scanQr": "Scan to save contact",
+    "cardInfo": [
+      {"label": "Title",         "value": "Cybersecurity Advisor · Product Strategist · Blockchain Advisor"},
+      {"label": "Location",      "value": "Global Operator · Remote-First", "flag": true},
+      {"label": "Experience",    "value": "15+ Years Enterprise Delivery"},
+      {"label": "Available For", "value": "Fractional · Fixed-Scope · Retainer"},
+      {"label": "Response Time", "value": "< 24 hours"},
+      {"label": "Languages",     "value": "English · Arabic"}
+    ],
+    "timeline": [
+      {
+        "year": "2019 – Present",
+        "role": "CEO",
+        "jobTitle": "Chief Executive Officer",
+        "org": "Zero Bytes · 0bytes.io",
+        "detail": "Founded Zero Bytes to deliver real-adversary cybersecurity rather than checklist compliance. The firm serves SaaS companies, financial institutions, and regulated enterprises across penetration testing (external, application, API, mobile), identity assessments, phishing simulations, threat intelligence monitoring, and ISO 27001 / PCI-DSS compliance readiness. Built alongside concurrent advisory and enterprise engagements; moved to full operational leadership in 2025 following the conclusion of the Conduent engagement."
+      },
+      {
+        "year": "Jan 2025 – Present",
+        "role": "Part-time CTO",
+        "jobTitle": "Part-time Chief Technology Officer",
+        "org": "CypherBox LLC",
+        "detail": "Early investor and Part-time CTO at CypherBox, an open-source Bitcoin wallet built on React Native delivering progressive self-custody for everyday users. Delivered a unified wallet experience spanning five integrations: Strike and Coinos for Lightning Network payments and fiat onramps, Ark Vault for next-generation Bitcoin Layer 2 transactions, Hot Wallet for self-custodial BIP39/SegWit coin control, and Cold Storage for PSBT-based hardware wallet signing via ColdCard, Keystone, and Jade. Architected the security model and technical roadmap across iOS and Android, with full ownership over private key management, UTXO design, and responsible vulnerability disclosure for the open-source contributor base."
+      },
+      {
+        "year": "2024 – Present",
+        "role": "Principal Consultant",
+        "jobTitle": "Principal Consultant",
+        "org": "djobs.net",
+        "detail": "Operating a senior consulting practice across three disciplines: cybersecurity advisory and senior security leadership programs, blockchain and Web3 architecture, and enterprise digital transformation. Clients span fintech organisations, enterprise businesses, and government-adjacent programmes across Africa, the Middle East, and Europe. Engagements are structured as part-time retainers, fixed-scope projects, or embedded advisory."
+      },
+      {
+        "year": "Sep 2021 – Nov 2024",
+        "role": "Solution Architect",
+        "jobTitle": "Solution Architect",
+        "org": "Conduent (Remote)",
+        "detail": "Designed a HIPAA-compliant healthcare identity infrastructure for US government agencies using Hyperledger Fabric and Self-Sovereign Identity (SSI) models. Architected a tokenised access management system that replaced centralised medical data custody with cryptographic credential control, giving patients and providers verifiable, auditable access without a central data store. Concurrently led the Royal Caribbean digital pilot: experience tokens for VIP services and concierge automation. Advised on welfare benefits distribution, IoT-integrated auditable access control, and supply chain verification."
+      },
+      {
+        "year": "Nov 2016 – Aug 2021",
+        "role": "Chief Technology Officer",
+        "jobTitle": "Chief Technology Officer",
+        "org": "Appitize LTD Co.",
+        "detail": "Served as CTO, owning technical strategy and digital product delivery for a client portfolio across the Gulf region. Led development of AI-powered conversational interfaces, brand and e-commerce platforms, and paid digital acquisition products. Managed technical teams, agency vendor relationships, and delivery timelines across concurrent high-traffic campaigns. Drove measurable commercial outcomes through data-informed product decisions aligned with client revenue objectives."
+      },
+      {
+        "year": "Apr 2015 – Dec 2016",
+        "role": "Lead Software Engineer",
+        "jobTitle": "Lead Software Engineer",
+        "org": "ICN Integrated Solutions (icare net)",
+        "detail": "Engineered ShoogirCash: a national e-Wallet integrated with the Central Bank of Sudan (CBOS) Consumer API for real-time settlement and clearing. ShoogirCash processed approximately 69% of Sudan's online payment transactions during 2015–16, becoming the country's de-facto digital payments rail. Built secure RESTful payment services, a tokenised transaction layer, and a multi-tier commission engine handling complex agent-network business structures. Operated concurrently with advisory engagements."
+      },
+      {
+        "year": "Jun 2011 – Apr 2015",
+        "role": "Software Engineer",
+        "jobTitle": "Software Engineer",
+        "org": "OraConcept for IT Solution",
+        "detail": "Designed and delivered the PETRONAS Enterprise Fuel eCoupon platform: a closed-loop, fraud-resistant prepaid fuel coupon system serving corporate clients and Petronas station agents across the national network. The platform covered online coupon ordering, watermarked serialised coupon generation, station-level claim and verification, and a credit redemption workflow converting redeemed coupons into bulk fuel order balance. Gave PETRONAS full lifecycle visibility and audit trail over every coupon issued, claimed, and settled."
+      }
+    ],
+    "education": [
+      {
+        "institution": "University at Buffalo, State University of New York",
+        "credential": "Blockchain Specialist · Blockchain Technology",
+        "period": "Jun 2021 – Sep 2022",
+        "detail": "Specialisation covering encryption, hashing, consensus mechanisms, transactions, and private-public key infrastructure. Designed, developed, and tested smart contracts and decentralised applications on a private Ethereum blockchain. Topics included dApp stack architecture, scalability trade-offs, privacy-preserving mechanisms, and a production landscape review."
+      },
+      {
+        "institution": "Sudan University of Science & Technology",
+        "credential": "Bachelor of Electronics Engineering · Computer Engineering",
+        "period": "2006 – 2011",
+        "detail": "Foundation in software engineering, electronics, network systems, and computer architecture."
+      },
+      {
+        "institution": "Niit Institute",
+        "credential": "Diploma in .NET Technology · Web Development using ASP.NET",
+        "period": "2012 – 2013",
+        "detail": "Practical training in .NET framework, C#, and ASP.NET web application development."
+      },
+      {
+        "institution": "Microsoft Virtual Academy",
+        "credential": "Computer Software Technology / Technician",
+        "period": "",
+        "detail": "Recognised as Top Student in Sudan. Covered core software technology and Microsoft development tooling."
+      }
+    ],
+    "certifications": [
+      {"name": "Prompt Design in Vertex AI Skill Badge",                       "issuer": "Google",                          "date": "Sep 2025"},
+      {"name": "Foundations of Digital Marketing & E-commerce",                "issuer": "Google · Coursera",               "date": "91.87%"},
+      {"name": "React.js Essential Training",                                   "issuer": "LinkedIn Learning",               "date": "Jan 2022"},
+      {"name": "Blockchain Platforms",                                          "issuer": "University at Buffalo · Coursera", "date": "85.18%"},
+      {"name": "Blockchain Basics",                                             "issuer": "University at Buffalo · Coursera", "date": "96%"},
+      {"name": "Smart Contracts",                                               "issuer": "University at Buffalo · Coursera", "date": "90.40%"},
+      {"name": "Decentralized Applications (Dapps)",                           "issuer": "University at Buffalo · Coursera", "date": "88.76%"},
+      {"name": "Programming for Everybody: Getting Started with Python",        "issuer": "University of Michigan · Coursera","date": "96.51%"},
+      {"name": "ITIL Foundation",                                               "issuer": "Cabinet Office",                  "date": "Feb 2013"},
+      {"name": "Software Testing using Visual Studio 2012",                     "issuer": "Microsoft",                       "date": "Apr 2013"},
+      {"name": "Administering Team Foundation Server 2012",                     "issuer": "Microsoft",                       "date": "Apr 2013"}
+    ],
+    "skills": [
+      {
+        "category": "Product & Delivery",
+        "items": [
+          "Enterprise Product Strategy & Roadmaps",
+          "Technical Delivery Leadership",
+          "e-Wallets, Payment Rails & Central-Bank API Integration",
+          "KYC / AML Workflows & Regulatory Compliance",
+          "Vendor Selection & Oversight",
+          "UN / Government Programme Management",
+          "Agile Sprint Planning & Release Management",
+          "Stakeholder Alignment & Executive Communication"
+        ]
+      },
+      {
+        "category": "Engineering",
+        "items": [
+          "React.js · Next.js · Node.js · FastAPI · C# / .NET",
+          "React Native & Flutter (Mobile)",
+          "REST & GraphQL APIs",
+          "PostgreSQL · MySQL · MongoDB · Firebase · Redis",
+          "Microservices & Event-Driven Architecture",
+          "CI/CD · Microsoft ALM · ITIL",
+          "Real-time & Geospatial Systems",
+          "Settlement, Clearing & Commission Engines"
+        ]
+      },
+      {
+        "category": "Security & Compliance",
+        "items": [
+          "Threat Modelling (STRIDE, PASTA, MITRE ATT&CK)",
+          "Security Architecture Design & Review",
+          "Risk Assessment & Gap Analysis",
+          "Senior Security Leadership on Retainer",
+          "Incident Response & Playbooks",
+          "DevSecOps & Secure SDLC",
+          "Compliance: ISO 27001 · SOC 2 · PCI-DSS · HIPAA · GDPR",
+          "Cloud Security (AWS · GCP · Azure)"
+        ]
+      },
+      {
+        "category": "Blockchain & Web3",
+        "items": [
+          "Hyperledger Fabric & Enterprise Blockchain",
+          "Self-Sovereign Identity (SSI) Architecture",
+          "Smart Contract Development & Audit",
+          "DeFi Protocols & DAO Governance",
+          "Tokenomics & Economic Modelling",
+          "NFT & Digital Asset Strategy",
+          "LLM Integration & RAG Pipelines",
+          "IPFS, TheGraph, Kafka"
+        ]
+      }
+    ]
+  },
+  "services": {
+    "heroLabel": "Services",
+    "heroTitle": "Four Disciplines. One Consultant.",
+    "heroSub": "Digital transformation. Product delivery. Cybersecurity leadership. Blockchain architecture. Structured as fixed-scope engagements, ongoing retainers, or embedded part-time advisory.",
+    "whatIOffer": "What I Deliver",
+    "serviceLabel": "Service",
+    "whatYouGet": "Deliverables",
+    "idealFor": "Ideal For",
+    "ctaLabel": "Services",
+    "ctaTag": "Next Step",
+    "ctaTitle": "Not Sure Which Engagement Fits?",
+    "ctaSub": "Book a 30-minute discovery call. We'll map your challenge to the right service model. Direct, no-obligation, and structured around what you actually need.",
+    "sendBrief": "Send a Brief",
+    "list": [
+      {
+        "id": "digital",
+        "num": "01",
+        "title": "Enterprise Digital Transformation",
+        "tagline": "System Modernisation with Security and Scalability Built In",
+        "seoHeadline": "Enterprise Digital Transformation Advisory & Technology Modernisation",
+        "description": "Digital transformation fails when it treats architecture as an afterthought: when security is bolted on after the stack is chosen, and modernisation is scoped by what is politically easy rather than what is technically necessary. I work with leadership teams to define what transformation actually means for their organisation, which systems to modernise first, how to sequence migration, where to build versus buy, and how to ensure security is a foundation rather than a feature.",
+        "body": "Having delivered national-scale systems for government agencies, energy companies, and regulated fintech, I bring a practitioner's perspective to transformation advisory, not a framework applied from a slide deck. Engagements are structured to produce a transformation architecture you can execute and defend to your board, investors, and regulators.",
+        "deliverables": [
+          "Digital Maturity Assessment",
+          "Technology Stack Audit & Modernisation Roadmap",
+          "Build vs. Buy Strategic Analysis",
+          "Cloud Migration Architecture & Sequencing Plan",
+          "Legacy System Integration Strategy",
+          "Data Architecture & Governance Framework",
+          "Digital Operating Model Design",
+          "Security-Embedded Architecture Design",
+          "Executive Alignment & Change Management Advisory",
+          "KPI & OKR Framework for Digital Initiatives"
+        ],
+        "idealFor": [
+          "Traditional Enterprises Modernising Core Systems",
+          "Government & Public Sector Digital Programmes",
+          "Mid-Market Organisations Scaling Technology Infrastructure",
+          "Organisations Post-Acquisition Integrating Systems"
+        ]
+      },
+      {
+        "id": "webmobile",
+        "num": "02",
+        "title": "Digital Product Strategy & Delivery",
+        "tagline": "Senior Product Leadership for Enterprise-Scale Systems",
+        "seoHeadline": "Enterprise Digital Product Strategy & Senior Delivery Leadership",
+        "description": "Enterprise-scale digital products, especially those at the intersection of security, compliance, and consumer experience, require a product leader who can operate in both the engineering layer and the boardroom. I provide senior product strategy and delivery leadership from concept through launch, without the ramp-up overhead of a full-time hire.",
+        "body": "From greenfield platform builds to complex enterprise migrations, I own the delivery: technical roadmap design, sprint coordination, vendor selection and oversight, stakeholder communication, and risk management. I anticipate blockers before they become programme failures. Engagements are calibrated to your stage, from early-stage product definition through mid-delivery rescue to ongoing part-time product leadership.",
+        "deliverables": [
+          "Product Strategy, Scoping & Roadmap Architecture",
+          "Technical Architecture Planning & Review",
+          "Agile Sprint Planning & Delivery Coordination",
+          "Cross-Functional Team Leadership",
+          "Vendor Selection, Evaluation & Commercial Oversight",
+          "Stakeholder Reporting & Executive Communication",
+          "Risk Register Design & Mitigation Planning",
+          "QA Process Design & Release Management",
+          "API Integration Architecture & Oversight",
+          "Web Platform & Mobile App (iOS / Android) Delivery"
+        ],
+        "idealFor": [
+          "Enterprises Running Strategic Digital Programmes",
+          "Startups Scaling Engineering Teams Past Early Stage",
+          "CTOs Needing Senior Delivery Support",
+          "Organisations Post-Acquisition or Mid-Transformation"
+        ]
+      },
+      {
+        "id": "cybersecurity",
+        "num": "03",
+        "title": "Cybersecurity Consulting & Security Leadership",
+        "tagline": "Senior Security Advisory for Enterprises and Regulated Industries",
+        "seoHeadline": "Cybersecurity Consulting & Senior Security Advisory for Enterprises",
+        "description": "Most organisations need a senior security leader well before they can justify a full-time executive hire. I embed as your dedicated security advisor on a part-time or project basis (an arrangement sometimes called a Fractional CISO): defining governance frameworks, owning the risk register, designing secure architecture, and driving compliance readiness across ISO 27001, SOC 2, PCI-DSS, and HIPAA, while your team stays focused on delivery.",
+        "body": "This is not a security checklist engagement. I work from your actual threat profile, mapping real attack paths and assessing the gap between your current posture and what regulators, investors, or enterprise buyers will require. The output is a security programme you can operate, not a report you will shelve. Engagements run as part-time retainers covering ongoing security leadership, fixed-scope assessments such as risk audits or architecture reviews, or incident response advisory. Backed by Zero Bytes, my dedicated cybersecurity firm.",
+        "deliverables": [
+          "Security Risk Assessment & Threat Landscape Mapping",
+          "Security Architecture Design & Review",
+          "Threat Modelling (STRIDE, PASTA, MITRE ATT&CK)",
+          "Penetration Testing Strategy, Scoping & Oversight",
+          "Ongoing Security Leadership on Retainer",
+          "Compliance Readiness: ISO 27001 · SOC 2 · PCI-DSS · HIPAA · GDPR",
+          "Incident Response Planning & Tabletop Exercises",
+          "Cloud Security Architecture (AWS · GCP · Azure)",
+          "DevSecOps Integration & Secure SDLC",
+          "Security Awareness Programme Design"
+        ],
+        "idealFor": [
+          "Fintech & Regulated Financial Services",
+          "SaaS Platforms Pre-Certification or Pre-Enterprise Sale",
+          "Enterprises with Legacy Infrastructure Exposure",
+          "Organisations Pursuing ISO 27001 or SOC 2"
+        ]
+      },
+      {
+        "id": "blockchain",
+        "num": "04",
+        "title": "Blockchain & Web3 Architecture Advisory",
+        "tagline": "Enterprise Blockchain Strategy, Identity Systems & Smart Contracts",
+        "seoHeadline": "Enterprise Blockchain Strategy, Web3 Advisory & Hyperledger Architecture",
+        "description": "The gap between blockchain's promise and failed enterprise implementations is almost always strategic, not technical. Organisations invest in the technology before they have defined the problem it solves. I guide organisations from feasibility assessment through production-grade architecture: Hyperledger Fabric, Self-Sovereign Identity systems, smart contract design, tokenomics modelling, and Web3 product strategy grounded in what actually works in regulated environments.",
+        "body": "My reference work includes a HIPAA-compliant, Hyperledger Fabric-based healthcare identity system for US government agencies, replacing centralised data custody with cryptographic SSI credentials. I apply that same rigour to enterprise DLT programmes, regulated asset infrastructure, and institutional Web3 initiatives. If blockchain is the right answer for your problem, we will build the architecture that holds up to scrutiny. If it is not, I will tell you that first.",
+        "deliverables": [
+          "Blockchain Feasibility Assessment & Strategic Recommendation",
+          "Hyperledger Fabric & Enterprise DLT Architecture",
+          "Self-Sovereign Identity (SSI) System Design",
+          "Smart Contract Architecture & Security Review",
+          "Tokenomics Design & Economic Modelling",
+          "Web3 Product Strategy & Technical Roadmap",
+          "DeFi Protocol Architecture Advisory",
+          "Layer 1 / Layer 2 Selection & Trade-Off Analysis",
+          "DAO Governance Structure Design",
+          "Blockchain Security Audit Coordination"
+        ],
+        "idealFor": [
+          "Enterprises Evaluating Distributed Ledger Technology",
+          "Government & Public Sector Identity Programmes",
+          "Web3 Protocols & Institutional DeFi Teams",
+          "Investment Funds & Family Offices with Digital Asset Exposure"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "heroLabel": "Case Studies",
+    "heroTag": "Proof of Delivery",
+    "heroSub": "Four systems built at enterprise and national scale. Each one measured, auditable, and still in production.",
+    "roleLabel": "Role",
+    "periodLabel": "Period",
+    "outcomesLabel": "Outcomes",
+    "archLabel": "Architecture",
+    "ctaTag": "Facing a Similar Challenge?",
+    "ctaTitle": "Let's Talk About Your System",
+    "ctaSub": "National-scale fintech. Government identity infrastructure. Enterprise fraud prevention. If the complexity is real, book a discovery session.",
+    "emailBtn": "Start a Conversation",
+    "list": [
+      {
+        "id": "shoogircash",
+        "tab": "ShoogirCash",
+        "title": "ShoogirCash: National Digital Payments Rail",
+        "category": "National Fintech Infrastructure",
+        "role": "Lead Software Engineer",
+        "summary": "Challenge: Sudan had no reliable digital payments infrastructure. Banks operated in isolation, settlement was manual, and the Central Bank of Sudan (CBOS) had no consumer-facing API integration with commercial systems. Action: Engineered ShoogirCash, a national e-Wallet directly integrated with the CBOS Consumer API for real-time settlement and clearing. Built a tokenised payment layer, multi-tier commission engine for agent networks, and a merchant portal with consumer mobile interface. Result: ShoogirCash processed approximately 69% of Sudan's online payment transactions in 2015-16, becoming the country's de-facto digital payments rail.",
+        "diagramTitle": "ShoogirCash System Architecture",
+        "outcomes": [
+          "~69% of Sudan online payment volume processed at peak (2015–16)",
+          "Central Bank of Sudan (CBOS) API integration for real-time settlement and clearing",
+          "Tokenised RESTful payment gateway with secure transaction handling",
+          "Multi-tier commission engine for complex agent-network business structures",
+          "Merchant portal and consumer mobile wallet interface"
+        ]
+      },
+      {
+        "id": "petronas",
+        "tab": "Fuel eCoupon",
+        "title": "PETRONAS Enterprise Fuel eCoupon Platform",
+        "category": "Enterprise / Fraud Prevention",
+        "role": "System Designer & Technical PM",
+        "summary": "Challenge: PETRONAS needed a fraud-resistant prepaid fuel system for corporate clients, one that gave full lifecycle visibility over every coupon issued, redeemed, and settled across a national station network. Action: Designed a closed-loop eCoupon platform: enterprises order prepaid fuel coupons online, print watermarked serialised vouchers, distribute to employees. Station agents submit coupons through a claim portal to receive fuel credit, which converts to bulk fuel ordering balance. Every coupon tracked from issuance to settlement. Result: Full audit trail and tamper-evident lifecycle for the national corporate fuel programme, eliminating coupon fraud and enabling precise station-level settlement.",
+        "diagramTitle": "Fuel eCoupon System Architecture",
+        "outcomes": [
+          "Closed-loop, fraud-resistant corporate fuel prepayment infrastructure",
+          "Watermarked, serialised coupon generation with tamper-evident print design",
+          "Multi-station claim portal for physical coupon submission and validation",
+          "Agent credit system: redeemed coupons convert to bulk fuel order balance",
+          "Full coupon lifecycle audit trail from issuance to settlement"
+        ]
+      },
+      {
+        "id": "fds",
+        "tab": "UN Fuel Distribution",
+        "title": "UN Peacekeeping Fuel Distribution System",
+        "category": "Mission-Critical Government Infrastructure",
+        "role": "System Designer & Technical PM",
+        "summary": "Challenge: The UNAMID UN peacekeeping mission in Darfur needed reliable fuel tracking for 60,000 vehicles, 14,000 generators, and 140 aircraft across 15 Petronas stations, in an environment with no reliable internet connectivity. Action: Designed a distributed offline-first database architecture: each field station recorded transactions to a local SQL Server instance, then automatically synchronised to the central Petronas HQ database in Khartoum whenever connectivity became available. All UN finance audit reports and fleet consumption dashboards generated from the centralised HQ database. Result: Continuous operational fuel tracking across the entire UNAMID fleet, with full audit compliance for UN finance reporting regardless of remote station connectivity.",
+        "diagramTitle": "Fuel Distribution System Architecture",
+        "outcomes": [
+          "60,000 vehicles tracked with per-transaction fuel consumption logs",
+          "14,000 generators on scheduled service and refuelling cycles",
+          "140 aircraft managed with aviation-grade fuel compliance records",
+          "15 dedicated Petronas stations operated exclusively for UNAMID",
+          "Offline-first distributed DB: field stations write to local SQL Server, sync to Khartoum HQ on available connection",
+          "UN finance audit reports and fleet dashboards from centralised HQ"
+        ]
+      },
+      {
+        "id": "healthcare-ssi",
+        "tab": "Healthcare SSI",
+        "title": "US Government Healthcare Identity System",
+        "category": "Blockchain / Government Identity",
+        "role": "Solution Architect",
+        "summary": "Challenge: US government healthcare agencies needed a HIPAA-compliant medical data access system that eliminated centralised custody risk, where a single breach would expose patient records across multiple agencies. Action: Architected a Self-Sovereign Identity (SSI) system on Hyperledger Fabric: patients and providers receive cryptographic credentials for verifiable, zero-knowledge access to health records. No centralised data store. Each access event anchored on the Hyperledger network for tamper-evident audit. Built an interoperability layer across multiple government agency systems. Result: HIPAA-compliant, decentralised identity infrastructure replacing centralised data custody with cryptographic access control, auditable, patient-controlled, and breach-resistant by architecture.",
+        "diagramTitle": "Healthcare SSI Architecture",
+        "outcomes": [
+          "Hyperledger Fabric network for tamper-evident health record anchoring",
+          "SSI-based patient credential issuance with zero-knowledge proof verification",
+          "HIPAA-compliant tokenised access control replacing centralised data custody",
+          "Interoperability layer across multiple US government agency systems",
+          "Royal Caribbean digital pilot: experience tokens for VIP services and concierge automation"
+        ]
+      }
+    ]
+  },
+  "insights": {
+    "heroLabel": "Insights",
+    "heroTitle": "Authority Perspectives",
+    "heroSub": "Ten articles across cybersecurity, blockchain, and product strategy. No AI-generated filler. Frameworks and first-principles thinking from 15 years of enterprise delivery.",
+    "knowledgeBase": "Knowledge Base",
+    "featured": "Featured",
+    "featuredLabel": "Featured articles",
+    "allArticles": "All Articles",
+    "allArticlesLabel": "All articles",
+    "read": "read",
+    "readArrow": "Read →",
+    "clusterCyber": "Cybersecurity & Governance",
+    "clusterBlockchain": "Blockchain & Trust Systems",
+    "clusterProduct": "Product Strategy & Scale",
+    "ctaLabel": "Stay Current",
+    "staySharp": "Stay Sharp",
+    "ctaTitle": "Get new articles in your inbox.",
+    "ctaSub": "Frameworks, case studies, and perspectives on cybersecurity, blockchain, and digital product strategy. No spam.",
+    "articleHeaderLabel": "Article header",
+    "breadcrumbHome": "Home",
+    "breadcrumbInsights": "Insights",
+    "articleBodyLabel": "Article body",
+    "workWithAhmed": "Work With Ahmed",
+    "articleCtaTitle": "Need expert advisory on this topic?",
+    "articleCtaSub": "Book a discovery session to discuss how these principles apply to your organisation.",
+    "backToInsights": "← All Insights",
+    "viewServices": "View Services →"
+  },
+  "footer": {
+    "newsletterLabel": "Newsletter",
+    "newsletterTitle": "Stay Sharp. Stay Ahead.",
+    "newsletterSub": "Frameworks and perspectives on cybersecurity, blockchain, and digital product strategy. No spam.",
+    "tagline": "Cybersecurity Advisor · Technical Product Strategist · Blockchain Advisor. 15+ years of enterprise delivery across fintech, government, and regulated industries.",
+    "servicesTitle": "Services",
+    "navigateTitle": "Navigate",
+    "contactTitle": "Contact",
+    "bookSession": "Book a Consultation →",
+    "scanQr": "Scan to save contact",
+    "copyright": "© 2026 Ahmed Djobs. All rights reserved.",
+    "location": "Global · Remote-First"
+  },
+  "common": {
+    "bookSession": "Book a Consultation",
+    "subscribe": "Subscribe",
+    "subscribing": "Subscribing…",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "learnMore": "Learn More"
+  }
+}

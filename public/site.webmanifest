@@ -1,0 +1,16 @@
+{
+  "name": "Ahmed Djobs — Cybersecurity & Blockchain Consultant",
+  "short_name": "Djobs",
+  "description": "Digital Consultant specializing in cybersecurity consulting, blockchain strategy, and secure digital infrastructure.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080810",
+  "theme_color": "#080810",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

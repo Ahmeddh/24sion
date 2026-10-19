@@ -1,0 +1,189 @@
+@import '../styles/motion-tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+/* ── CSS Variables ── */
+:root {
+  --font-sans:  'Space Grotesk', system-ui, sans-serif;
+  --font-mono:  'IBM Plex Mono', monospace;
+  --font-serif: 'Lora', Georgia, serif;
+  --nav-h: 64px;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Base ── */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--font-sans);
+  background-color: #080810;
+  color: #f0f0fa;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+::selection { background: rgba(0,198,255,0.25); color: #fff; }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #080810; }
+::-webkit-scrollbar-thumb { background: #7b61ff; border-radius: 4px; }
+
+/* ── Typography utilities ── */
+.font-sans  { font-family: var(--font-sans); }
+.font-mono  { font-family: var(--font-mono); }
+.font-serif { font-family: var(--font-serif); }
+
+/* ── Gradient text ── */
+.text-grad {
+  background: linear-gradient(135deg, #00c6ff, #7b61ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.text-grad-green {
+  background: linear-gradient(135deg, #00ffaa, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Glow effects ── */
+.glow-cyan   { box-shadow: 0 0 40px rgba(0,198,255,0.15); }
+.glow-purple { box-shadow: 0 0 40px rgba(123,97,255,0.15); }
+.text-glow-cyan { text-shadow: 0 0 20px rgba(0,198,255,0.5); }
+
+/* ── Noise texture overlay ── */
+.noise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+
+/* ── Prose for articles ── */
+.prose-dark p   { font-family: var(--font-serif); font-size: 1.05rem; line-height: 1.85; color: #9898b8; margin-bottom: 1.4rem; }
+.prose-dark h2  { font-family: var(--font-serif); font-size: 1.55rem; font-weight: 600; color: #f0f0fa; margin: 3.2rem 0 1.1rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,0.06); }
+.prose-dark h3  { font-size: 1.1rem; font-weight: 700; color: #f0f0fa; margin: 2rem 0 0.8rem; }
+.prose-dark a   { color: #00c6ff; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(0,198,255,0.4); }
+.prose-dark ul  { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.4rem; }
+.prose-dark ul li { display: flex; align-items: flex-start; gap: 0.6rem; font-family: var(--font-serif); font-size: 1rem; line-height: 1.75; color: #9898b8; }
+.prose-dark ul li::before { content: '▸'; color: #00c6ff; font-size: 0.8rem; flex-shrink: 0; margin-top: 0.3rem; font-family: var(--font-sans); }
+.prose-dark strong { color: #f0f0fa; font-family: var(--font-sans); font-weight: 600; }
+.prose-dark hr { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 2.5rem 0; }
+
+/* ── Reading progress bar ── */
+#reading-progress {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: 2px; z-index: 200;
+  background: linear-gradient(90deg, #00c6ff, #7b61ff);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.08s linear;
+}
+
+/* ── Marquee ── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track { animation: marquee 36s linear infinite; }
+.marquee-track:hover { animation-play-state: paused; }
+
+/* ── Cyber grid bg ── */
+.bg-cyber-grid {
+  background-image:
+    linear-gradient(rgba(0,198,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,198,255,0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* ── Canvas cyber animation ── */
+canvas#hero-canvas {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  pointer-events: none; opacity: 0.6;
+}
+
+/* ── Arabic / RTL font ── */
+:lang(ar) {
+  font-family: 'Tajawal', 'Space Grotesk', system-ui, sans-serif;
+  letter-spacing: 0;
+}
+:lang(ar) .font-mono {
+  font-family: 'Tajawal', 'IBM Plex Mono', monospace;
+}
+
+/* ── Arabic / RTL overflow fixes ── */
+[dir='rtl'] h1 {
+  letter-spacing: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
+}
+/* Gradient-text span: padding prevents Arabic descender/diacritic clipping from bg-clip-text */
+[dir='rtl'] h1 > span {
+  display: inline;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  padding-block: 0.25em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+/* Hero h1 only: clamp font size, increase line-height for Arabic letterform depth */
+[dir='rtl'] section[aria-label="Hero"] h1 {
+  font-size: clamp(1.85rem, 8.5vw, 4.8rem);
+  line-height: 1.32;
+}
+/* Extra bottom padding for hero gradient span to protect Arabic descenders (e.g. ق in ثقة) */
+[dir='rtl'] section[aria-label="Hero"] h1 > span {
+  padding-block-end: 0.35em;
+}
+[dir='rtl'] p {
+  overflow-wrap: break-word;
+}
+[dir='rtl'] .flex-wrap > span {
+  min-width: 0;
+}
+/* Reading progress bar: fill from right in RTL */
+[dir='rtl'] #reading-progress {
+  transform-origin: right;
+}
+/* Arabic body copy needs more breathing room than Latin */
+:lang(ar) body,
+:lang(ar) p {
+  line-height: 1.85;
+}
+/* Arabic headings: zero tracking, generous line-height for letterform depth */
+:lang(ar) h2,
+:lang(ar) h3 {
+  letter-spacing: 0;
+  line-height: 1.45;
+  word-spacing: 0.05em;
+}
+/* Reverse marquee direction for RTL */
+[dir='rtl'] .marquee-track {
+  animation-direction: reverse;
+}
+
+/* ── Focus glow ── */
+:focus-visible {
+  outline: 2px solid rgba(0,198,255,0.55);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid rgba(0,198,255,0.45);
+  outline-offset: 1px;
+  border-radius: 6px;
+}
+
