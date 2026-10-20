@@ -2,7 +2,8 @@ import { notFound }  from 'next/navigation'
 import Link           from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import { BookButton, CTAButton } from '@/components/ui/CTAButton'
-import { articleSchema } from '@/lib/seo'
+import { articleSchema, breadcrumbSchema, buildMeta } from '@/lib/seo'
+import { SITE } from '@/lib/constants'
 import { articles }   from '@/content/articles'
 import { articlesAr } from '@/content/articlesAr'
 import { PageMotion } from '@/components/layout/PageMotion'
@@ -22,11 +23,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params
   const isAr    = locale === 'ar'
   const article = isAr ? (articlesAr[slug] ?? articles[slug]) : articles[slug]
-  if (!article) return { title: 'Article Not Found' }
-  return {
-    title:       article.title,
-    description: article.excerpt,
-  }
+  if (!article) return buildMeta({ title: 'Article Not Found', description: '', noindex: true })
+  return buildMeta({
+    title:         article.seoTitle ?? article.title,
+    description:   article.seoDescription ?? article.excerpt,
+    path:          `/insights/${slug}`,
+    locale,
+    image:         article.image ? `${SITE.url}${article.image}` : undefined,
+    imageAlt:      article.imageAlt,
+    type:          'article',
+    publishedTime: article.date,
+    modifiedTime:  article.updated ?? article.date,
+    section:       article.tag,
+  })
 }
 
 /* Generate all locale × slug combinations so every route is
@@ -165,12 +174,20 @@ export default async function ArticlePage({ params }: Props) {
     excerpt:  article.excerpt,
     slug,
     date:     article.date,
+    updated:  article.updated,
     category: article.tag,
+    locale,
+    image:    article.image ? `${SITE.url}${article.image}` : undefined,
   })
+  const crumbs = breadcrumbSchema([
+    { name: t('breadcrumbHome'),     url: `${SITE.url}/${locale}` },
+    { name: t('breadcrumbInsights'), url: `${SITE.url}/${locale}/insights` },
+    { name: article.title,           url: `${SITE.url}/${locale}/insights/${slug}` },
+  ])
 
   const tc       = tagColorCls[article.tagColor] ?? tagColorCls.cyan
   const dateStr  = new Date(article.date).toLocaleDateString(
-    isAr ? 'ar-SA' : 'en-US',
+    isAr ? 'ar-EG' : 'en-US',
     { year: 'numeric', month: 'long', day: 'numeric' }
   )
 
@@ -180,6 +197,10 @@ export default async function ArticlePage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }}
       />
 
       {/* ═══ HEADER ════════════════════════════════════════════ */}

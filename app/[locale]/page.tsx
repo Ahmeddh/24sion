@@ -3,6 +3,8 @@ import { useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 import { BookButton, CTAButton } from '@/components/ui/CTAButton'
 import { buildMeta } from '@/lib/seo'
+import { articles, type Article } from '@/content/articles'
+import { articlesAr } from '@/content/articlesAr'
 import { SERVICES, SITE } from '@/lib/constants'
 import { PageMotion } from '@/components/layout/PageMotion'
 import { FadeIn, MotionSection } from '@/components/motion'
@@ -32,6 +34,7 @@ export async function generateMetadata({ params }: Props) {
     title: `Ahmed Djobs: ${t('heroLine1')} ${t('heroLine2')} ${t('heroLine3')}`,
     description: t('heroSub'),
     path: '/',
+    locale,
   })
 }
 
@@ -52,7 +55,15 @@ function HomeContent({ locale }: { locale: string }) {
 
   const svcCardList   = t.raw('svcCards')      as SvcCard[]
   const svcCardMap    = Object.fromEntries(svcCardList.map(c => [c.id, c]))
-  const insightCards  = t.raw('insightCards')  as InsightCard[]
+  const insightSrc: Record<string, Article> = locale === 'ar' ? articlesAr : articles
+  const insightCards: InsightCard[] = [
+    'bitcoin-200-week-ma-dca-plan',
+    'bitcoin-treasury-companies-leverage-risk',
+    'zero-trust-architecture',
+  ].map(slug => {
+    const a = insightSrc[slug] ?? articles[slug]
+    return { slug, tag: a.tag, tagColor: a.tagColor, title: a.title, excerpt: a.excerpt, readMin: parseInt(a.read, 10) || 0 }
+  })
   const expertiseRaw  = t.raw('expertiseItems') as ExpertiseItem[]
   const expertiseItems = expertiseRaw.map((item, i) => ({
     label: item.label,
@@ -297,7 +308,7 @@ function HomeContent({ locale }: { locale: string }) {
                     <h3 className="text-[0.95rem] font-bold font-sans text-[#f0f0fa] leading-snug mb-3 group-hover:text-cyan transition-colors">
                       {post.title}
                     </h3>
-                    <p className="text-[0.82rem] text-[#5a5a7a] leading-relaxed flex-1">{post.excerpt}</p>
+                    <p className="text-[0.82rem] text-[#5a5a7a] leading-relaxed flex-1 line-clamp-3">{post.excerpt}</p>
                     <span className="mt-5 text-xs font-mono text-cyan opacity-0 group-hover:opacity-100 transition-opacity">
                       {t('readArticle')}
                     </span>

@@ -2,30 +2,54 @@ import type { Metadata } from 'next'
 import { SITE } from './constants'
 
 export function buildMeta(opts: {
-  title:       string
-  description: string
-  path?:       string
-  noindex?:    boolean
-  image?:      string
+  title:          string
+  description:    string
+  path?:          string
+  locale?:        string
+  noindex?:       boolean
+  image?:         string
+  imageAlt?:      string
+  type?:          'website' | 'article'
+  publishedTime?: string
+  modifiedTime?:  string
+  section?:       string
 }): Metadata {
-  const url   = `${SITE.url}${opts.path ?? ''}`
-  const image = opts.image ?? `${SITE.url}/og-image.png`
+  const path  = opts.path && opts.path !== '/' ? opts.path : ''
+  const url   = opts.locale ? `${SITE.url}/${opts.locale}${path}` : `${SITE.url}${opts.path ?? ''}`
+  const image = opts.image ?? `${SITE.url}/opengraph-image`
+  const alt   = opts.imageAlt ?? opts.title
 
   return {
-    title:       `${opts.title} | Ahmed Djobs`,
+    title:       `${opts.title} | ${SITE.name}`,
     description: opts.description,
     metadataBase: new URL(SITE.url),
-    alternates:  { canonical: url },
+    alternates: {
+      canonical: url,
+      ...(opts.locale ? {
+        languages: {
+          en:          `${SITE.url}/en${path}`,
+          ar:          `${SITE.url}/ar${path}`,
+          'x-default': `${SITE.url}/en${path}`,
+        },
+      } : {}),
+    },
     robots: opts.noindex
       ? { index: false, follow: false }
       : { index: true, follow: true, googleBot: { index: true, follow: true } },
     openGraph: {
-      type:        'website',
+      type:        opts.type ?? 'website',
       url,
       title:       opts.title,
       description: opts.description,
       siteName:    SITE.name,
-      images:      [{ url: image, width: 1200, height: 630, alt: opts.title }],
+      locale:      opts.locale === 'ar' ? 'ar_AR' : 'en_US',
+      images:      [{ url: image, width: 1200, height: 630, alt }],
+      ...(opts.type === 'article' ? {
+        publishedTime: opts.publishedTime,
+        modifiedTime:  opts.modifiedTime ?? opts.publishedTime,
+        section:       opts.section,
+        authors:       [SITE.name],
+      } : {}),
     },
     twitter: {
       card:        'summary_large_image',
@@ -150,17 +174,25 @@ export function articleSchema(opts: {
   excerpt:   string
   slug:      string
   date:      string
+  updated?:  string
   category:  string
+  locale?:   string
+  image?:    string
 }) {
+  const locale = opts.locale ?? 'en'
+  const url    = `${SITE.url}/${locale}/insights/${opts.slug}`
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline:       opts.title,
-    description:    opts.excerpt,
-    url:            `${SITE.url}/insights/${opts.slug}`,
-    datePublished:  opts.date,
-    dateModified:   opts.date,
-    articleSection: opts.category,
+    headline:         opts.title,
+    description:      opts.excerpt,
+    url,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    inLanguage:       locale,
+    image:            opts.image ?? `${SITE.url}/opengraph-image`,
+    datePublished:    opts.date,
+    dateModified:     opts.updated ?? opts.date,
+    articleSection:   opts.category,
     author: {
       '@type': 'Person',
       name:    'Ahmed Djobs',
@@ -168,9 +200,9 @@ export function articleSchema(opts: {
     },
     publisher: {
       '@type': 'Organization',
-      name:    'Ahmed Djobs',
+      name:    SITE.name,
       url:     SITE.url,
-      logo: { '@type': 'ImageObject', url: `${SITE.url}/favicon.svg` },
+      logo: { '@type': 'ImageObject', url: `${SITE.url}/avatar-swirl.png` },
     },
   }
 }

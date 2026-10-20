@@ -1,6 +1,6 @@
 export const SITE = {
   name:        'Ahmed Djobs',
-  url:         'https://djobs.net',
+  url:         'https://24sion.com',
   title:       'Ahmed Djobs | Cybersecurity Advisor · Product Strategist · Blockchain Advisor',
   description: 'Ahmed Djobs is a senior digital consultant with 15+ years of enterprise delivery. Cybersecurity Advisor, Technical Product Strategist, and Blockchain Advisor for regulated industries, fintech, and government-scale organisations. Founder of Zero Bytes cybersecurity.',
   email:       'contact@djobs.net',
