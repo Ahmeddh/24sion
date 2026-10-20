@@ -12,7 +12,8 @@ import { organizationSchema, personSchema, websiteSchema } from '@/lib/seo'
 import { ConsentBanner } from '@/components/consent/ConsentBanner'
 import { ScrollToTop } from '@/components/ui/ScrollToTop'
 
-const GA_ID = 'G-X89XZE17WL'
+// Set per site in Vercel (Production only). Empty on previews and locally, so no tracking there.
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 
 export const viewport: Viewport = {
   themeColor:   '#080810',
@@ -75,7 +76,6 @@ export const metadata: Metadata = {
     icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
   },
   manifest: '/site.webmanifest',
-  verification: { google: 'your-google-site-verification-token' },
 }
 
 type Props = {
@@ -115,6 +115,8 @@ export default async function LocaleLayout({ children, params }: Props) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       </head>
       <body className="bg-base text-[#f0f0fa] antialiased">
+        {GA_ID && (
+          <>
         <script dangerouslySetInnerHTML={{ __html: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -144,6 +146,8 @@ export default async function LocaleLayout({ children, params }: Props) {
           gtag('js', new Date());
           gtag('config', '${GA_ID}', { page_path: window.location.pathname });
         `}</Script>
+          </>
+        )}
 
         <NextIntlClientProvider messages={messages}>
           <Nav locale={locale} />
