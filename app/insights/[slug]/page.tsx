@@ -7,10 +7,10 @@ import { articles }   from '@/content/articles'
 
 /* ── Tag colour map ───────────────────────────────────────── */
 const tagColorCls: Record<string, string> = {
-  cyan:   'text-cyan   border-[rgba(0,198,255,0.25)]   bg-[rgba(0,198,255,0.08)]',
-  purple: 'text-purple border-[rgba(123,97,255,0.25)]  bg-[rgba(123,97,255,0.08)]',
-  green:  'text-[#00ffaa] border-[rgba(0,255,170,0.2)] bg-[rgba(0,255,170,0.06)]',
-  amber:  'text-[#ffb340] border-[rgba(255,179,64,0.2)] bg-[rgba(255,179,64,0.06)]',
+  cyan:   'text-cyan   border-[rgba(238,148,39,0.25)]   bg-[rgba(238,148,39,0.08)]',
+  purple: 'text-purple border-[rgba(77,159,220,0.25)]  bg-[rgba(77,159,220,0.08)]',
+  green:  'text-[#7FB8E8] border-[rgba(127,184,232,0.2)] bg-[rgba(127,184,232,0.06)]',
+  amber:  'text-[#F7B766] border-[rgba(247,183,102,0.2)] bg-[rgba(247,183,102,0.06)]',
 }
 
 /* ── Types ────────────────────────────────────────────────── */
@@ -179,7 +179,7 @@ export default function ArticlePage({ params }: Props) {
       {/* ═══ CTA ════════════════════════════════════════════════ */}
       <section className="py-16 px-6 border-t border-[rgba(255,255,255,0.05)]" aria-label="CTA">
         <div className="max-w-[720px] mx-auto">
-          <div className="bg-[#0e0e1c] border border-[rgba(0,198,255,0.15)] rounded-2xl p-8 text-center">
+          <div className="bg-[#0e0e1c] border border-[rgba(238,148,39,0.15)] rounded-2xl p-8 text-center">
             <p className="text-xs font-mono text-cyan tracking-widest uppercase mb-3">Work With Ahmed</p>
             <h2 className="text-xl font-bold font-sans text-[#f0f0fa] mb-3">
               Need expert advisory on this topic?
@@ -194,7 +194,7 @@ export default function ArticlePage({ params }: Props) {
             <Link href="/insights" className="text-sm font-mono text-[#5a5a7a] hover:text-[#f0f0fa] transition-colors">
               ← All Insights
             </Link>
-            <Link href="/services" className="text-sm font-mono text-cyan hover:text-[#22d4ff] transition-colors">
+            <Link href="/services" className="text-sm font-mono text-cyan hover:text-[#F7B766] transition-colors">
               View Services →
             </Link>
           </div>

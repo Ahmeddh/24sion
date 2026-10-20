@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import { BookButton, CTAButton } from '@/components/ui/CTAButton'
 import { SITE } from '@/lib/constants'
@@ -16,11 +17,12 @@ type CertItem       = { name: string; issuer: string; date: string }
 type SkillGroup     = { category: string; items: string[] }
 type CardInfoItem   = { label: string; value: string; flag?: boolean }
 
+/* 24sion brand palette: orange #EE9427 · blue #0C4F8C (light text variant #4D9FDC) */
 const skillColors = [
-  { color: 'text-[#00ffaa]', border: 'border-[rgba(0,255,170,0.12)]', dot: 'bg-[#00ffaa]' },
-  { color: 'text-[#ffb340]', border: 'border-[rgba(255,179,64,0.12)]', dot: 'bg-[#ffb340]' },
-  { color: 'text-cyan',      border: 'border-[rgba(0,198,255,0.15)]',  dot: 'bg-cyan'      },
-  { color: 'text-purple',    border: 'border-[rgba(123,97,255,0.15)]', dot: 'bg-purple'    },
+  { color: 'text-[#EE9427]', border: 'border-[rgba(238,148,39,0.15)]', dot: 'bg-[#EE9427]' },
+  { color: 'text-[#4D9FDC]', border: 'border-[rgba(77,159,220,0.15)]', dot: 'bg-[#4D9FDC]' },
+  { color: 'text-[#F7B766]', border: 'border-[rgba(247,183,102,0.12)]', dot: 'bg-[#F7B766]' },
+  { color: 'text-[#7FB8E8]', border: 'border-[rgba(127,184,232,0.12)]', dot: 'bg-[#7FB8E8]' },
 ]
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -58,15 +60,15 @@ export default async function AboutPage({ params }: Props) {
           {/* Text */}
           <FadeIn delay={0.05}>
           <div>
-            <p className="text-xs font-mono text-cyan tracking-[0.2em] uppercase mb-4">{t('whoIAm')}</p>
+            <p className="text-xs font-mono text-[#EE9427] tracking-[0.2em] uppercase mb-4">{t('whoIAm')}</p>
             <h1 className="text-4xl md:text-5xl font-bold font-sans text-[#f0f0fa] tracking-tight leading-tight mb-6">
               {locale === 'ar' ? 'أحمد جوبس' : 'Ahmed Djobs'}
             </h1>
-            <p className="text-lg text-purple font-mono mb-6">{t('tagline')}</p>
+            <p className="text-lg text-[#4D9FDC] font-mono mb-6">{t('tagline')}</p>
             <p className="text-[#9898b8] leading-relaxed mb-4">{t('heroP1')}</p>
             <p className="text-[#9898b8] leading-relaxed mb-8">{t('heroP2')}</p>
             <div className="flex gap-3">
-              <BookButton size="lg" />
+              <BookButton size="lg" className="!bg-[#0C4F8C] hover:!bg-[#1565AD] hover:!shadow-[0_6px_20px_rgba(12,79,140,0.45)]" />
               <CTAButton href={`mailto:${SITE.email}`} variant="ghost" size="lg" external>
                 {t('getInTouch')}
               </CTAButton>
@@ -78,9 +80,13 @@ export default async function AboutPage({ params }: Props) {
           <FadeIn delay={0.2}>
           <div className="bg-[#0e0e1c] border border-[rgba(255,255,255,0.07)] rounded-2xl p-8">
             <div className="flex items-center gap-4 mb-7 pb-7 border-b border-[rgba(255,255,255,0.06)]">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan/30 to-purple/30 border border-[rgba(255,255,255,0.1)] flex items-center justify-center text-2xl font-bold text-[#f0f0fa] font-mono">
-                AD
-              </div>
+              <Image
+                src="/avatar-swirl.png"
+                alt="Ahmed Djobs, 24sion swirl logo"
+                width={64}
+                height={64}
+                className="w-16 h-16 rounded-full border border-[rgba(238,148,39,0.35)]"
+              />
               <div>
                 <p className="text-[#f0f0fa] font-bold text-lg">{locale === 'ar' ? 'أحمد جوبس' : 'Ahmed Djobs'}</p>
                 <p className="text-[#5a5a7a] text-sm font-mono">@AhmedDjobs</p>
@@ -105,7 +111,7 @@ export default async function AboutPage({ params }: Props) {
       {/* ═══ PHILOSOPHY ══════════════════════════════════════════ */}
       <section className="py-16 px-6 border-t border-[rgba(255,255,255,0.05)]" aria-label={t('philosophyLabel')}>
         <MotionSection className="max-w-[800px] mx-auto text-center">
-          <p className="text-xs font-mono text-purple tracking-[0.2em] uppercase mb-4">{t('philosophyTitle')}</p>
+          <p className="text-xs font-mono text-[#EE9427] tracking-[0.2em] uppercase mb-4">{t('philosophyTitle')}</p>
           <blockquote className="text-2xl md:text-3xl font-bold font-sans text-[#f0f0fa] leading-snug mb-6">
             {t('philosophyQuote')}
           </blockquote>
@@ -117,7 +123,7 @@ export default async function AboutPage({ params }: Props) {
       <section className="py-20 px-6 border-t border-[rgba(255,255,255,0.05)]" aria-label={t('expertiseTag')}>
         <div className="max-w-[1100px] mx-auto">
           <MotionSection className="text-center mb-14">
-            <p className="text-xs font-mono text-cyan tracking-[0.2em] uppercase mb-3">{t('expertiseTag')}</p>
+            <p className="text-xs font-mono text-[#EE9427] tracking-[0.2em] uppercase mb-3">{t('expertiseTag')}</p>
             <h2 className="text-3xl font-bold font-sans text-[#f0f0fa]">{t('skillsTitle')}</h2>
           </MotionSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
@@ -149,17 +155,17 @@ export default async function AboutPage({ params }: Props) {
       <section className="py-20 px-6 border-t border-[rgba(255,255,255,0.05)]" aria-label={t('journeyTag')}>
         <div className="max-w-[800px] mx-auto">
           <MotionSection className="text-center mb-14">
-            <p className="text-xs font-mono text-cyan tracking-[0.2em] uppercase mb-3">{t('journeyTag')}</p>
+            <p className="text-xs font-mono text-[#EE9427] tracking-[0.2em] uppercase mb-3">{t('journeyTag')}</p>
             <h2 className="text-3xl font-bold font-sans text-[#f0f0fa]">{t('timelineTitle')}</h2>
           </MotionSection>
           <ol className="relative border-s border-[rgba(255,255,255,0.08)] flex flex-col gap-10 ps-8">
             {timeline.map((item, i) => (
               <MotionSection key={i} delay={i * 0.06}>
                 <li className="relative">
-                  <span className="absolute -start-[2.35rem] top-1 w-3 h-3 rounded-full bg-[#0e0e1c] border-2 border-cyan" aria-hidden="true" />
-                  <p className="text-xs font-mono text-cyan mb-1">{item.year}</p>
+                  <span className="absolute -start-[2.35rem] top-1 w-3 h-3 rounded-full bg-[#0e0e1c] border-2 border-[#EE9427]" aria-hidden="true" />
+                  <p className="text-xs font-mono text-[#EE9427] mb-1">{item.year}</p>
                   <p className="text-[1rem] font-bold text-[#f0f0fa] mb-1">{item.role}</p>
-                  <p className="text-xs text-purple font-mono mb-2">{item.org}</p>
+                  <p className="text-xs text-[#4D9FDC] font-mono mb-2">{item.org}</p>
                   <p className="text-[0.875rem] text-[#9898b8] leading-relaxed">{item.detail}</p>
                 </li>
               </MotionSection>
@@ -172,7 +178,7 @@ export default async function AboutPage({ params }: Props) {
       <section className="py-20 px-6 border-t border-[rgba(255,255,255,0.05)]" aria-label={t('credentialsTag')}>
         <div className="max-w-[800px] mx-auto">
           <MotionSection className="text-center mb-14">
-            <p className="text-xs font-mono text-purple tracking-[0.2em] uppercase mb-3">{t('credentialsTag')}</p>
+            <p className="text-xs font-mono text-[#EE9427] tracking-[0.2em] uppercase mb-3">{t('credentialsTag')}</p>
             <h2 className="text-3xl font-bold font-sans text-[#f0f0fa]">{t('educationTitle')}</h2>
           </MotionSection>
           <div className="flex flex-col gap-6">
@@ -185,7 +191,7 @@ export default async function AboutPage({ params }: Props) {
                     <span className="text-xs font-mono text-[#6e6e8e] whitespace-nowrap mt-1">{item.period}</span>
                   )}
                 </div>
-                <p className="text-sm font-mono text-[#b8a8ff] mb-3">{item.credential}</p>
+                <p className="text-sm font-mono text-[#7FB8E8] mb-3">{item.credential}</p>
                 <p className="text-[0.875rem] text-[#9898b8] leading-relaxed">{item.detail}</p>
               </div>
               </MotionSection>
@@ -198,17 +204,17 @@ export default async function AboutPage({ params }: Props) {
       <section className="py-20 px-6 border-t border-[rgba(255,255,255,0.05)]" aria-label={t('licensesTag')}>
         <div className="max-w-[800px] mx-auto">
           <MotionSection className="text-center mb-14">
-            <p className="text-xs font-mono text-cyan tracking-[0.2em] uppercase mb-3">{t('licensesTag')}</p>
+            <p className="text-xs font-mono text-[#EE9427] tracking-[0.2em] uppercase mb-3">{t('licensesTag')}</p>
             <h2 className="text-3xl font-bold font-sans text-[#f0f0fa]">{t('certificationsTitle')}</h2>
           </MotionSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {certifications.map((cert, i) => (
               <MotionSection key={i} delay={i * 0.06}>
                 <div className="bg-[#0e0e1c] border border-[rgba(255,255,255,0.07)] rounded-xl p-5 flex items-start gap-4">
-                  <span className="w-2 h-2 rounded-full bg-cyan flex-shrink-0 mt-[0.35rem]" aria-hidden="true" />
+                  <span className="w-2 h-2 rounded-full bg-[#EE9427] flex-shrink-0 mt-[0.35rem]" aria-hidden="true" />
                   <div>
                     <p className="text-sm font-semibold text-[#f0f0fa] mb-0.5">{cert.name}</p>
-                    <p className="text-xs font-mono text-purple">{cert.issuer}</p>
+                    <p className="text-xs font-mono text-[#4D9FDC]">{cert.issuer}</p>
                     <p className="text-xs font-mono text-[#6e6e8e] mt-0.5">{cert.date}</p>
                   </div>
                 </div>
@@ -221,16 +227,16 @@ export default async function AboutPage({ params }: Props) {
       {/* ═══ CTA ════════════════════════════════════════════════ */}
       <section className="py-24 px-6 border-t border-[rgba(255,255,255,0.05)]" aria-label={t('ctaLabel')}>
         <MotionSection className="max-w-[700px] mx-auto text-center">
-          <p className="text-xs font-mono text-cyan tracking-[0.2em] uppercase mb-4">{t('ctaTag')}</p>
+          <p className="text-xs font-mono text-[#EE9427] tracking-[0.2em] uppercase mb-4">{t('ctaTag')}</p>
           <h2 className="text-3xl font-bold font-sans text-[#f0f0fa] mb-4">{t('ctaTitle')}</h2>
           <p className="text-[#c0c0d8] mb-10 max-w-md mx-auto">{t('ctaSub')}</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
-            <BookButton size="xl" />
+            <BookButton size="xl" className="!bg-[#0C4F8C] hover:!bg-[#1565AD] hover:!shadow-[0_6px_20px_rgba(12,79,140,0.45)]" />
             <CTAButton href={`/${locale}/services`} variant="ghost" size="xl">{t('viewServices')}</CTAButton>
           </div>
           <div className="flex flex-col items-center gap-2">
             <p className="text-[0.65rem] font-mono text-[#6e6e8e] tracking-widest uppercase">{t('scanQr')}</p>
-            <div className="inline-block rounded-xl overflow-hidden border border-[rgba(0,198,255,0.2)] p-2 bg-[#0a0a18]">
+            <div className="inline-block rounded-xl overflow-hidden border border-[rgba(77,159,220,0.3)] p-2 bg-[#0a0a18]">
               <ContactQR size={110} />
             </div>
           </div>

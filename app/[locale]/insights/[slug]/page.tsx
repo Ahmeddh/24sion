@@ -2,7 +2,8 @@ import { notFound }  from 'next/navigation'
 import Link           from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import { BookButton, CTAButton } from '@/components/ui/CTAButton'
-import { articleSchema } from '@/lib/seo'
+import { articleSchema, breadcrumbSchema, buildMeta } from '@/lib/seo'
+import { SITE } from '@/lib/constants'
 import { articles }   from '@/content/articles'
 import { articlesAr } from '@/content/articlesAr'
 import { PageMotion } from '@/components/layout/PageMotion'
@@ -10,10 +11,10 @@ import { MotionSection } from '@/components/motion'
 import type { Metadata } from 'next'
 
 const tagColorCls: Record<string, string> = {
-  cyan:   'text-cyan   border-[rgba(0,198,255,0.25)]   bg-[rgba(0,198,255,0.08)]',
-  purple: 'text-purple border-[rgba(123,97,255,0.25)]  bg-[rgba(123,97,255,0.08)]',
-  green:  'text-[#00ffaa] border-[rgba(0,255,170,0.2)] bg-[rgba(0,255,170,0.06)]',
-  amber:  'text-[#ffb340] border-[rgba(255,179,64,0.2)] bg-[rgba(255,179,64,0.06)]',
+  cyan:   'text-cyan   border-[rgba(238,148,39,0.25)]   bg-[rgba(238,148,39,0.08)]',
+  purple: 'text-purple border-[rgba(77,159,220,0.25)]  bg-[rgba(77,159,220,0.08)]',
+  green:  'text-[#7FB8E8] border-[rgba(127,184,232,0.2)] bg-[rgba(127,184,232,0.06)]',
+  amber:  'text-[#F7B766] border-[rgba(247,183,102,0.2)] bg-[rgba(247,183,102,0.06)]',
 }
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
@@ -22,11 +23,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params
   const isAr    = locale === 'ar'
   const article = isAr ? (articlesAr[slug] ?? articles[slug]) : articles[slug]
-  if (!article) return { title: 'Article Not Found' }
-  return {
-    title:       article.title,
-    description: article.excerpt,
-  }
+  if (!article) return buildMeta({ title: 'Article Not Found', description: '', noindex: true })
+  return buildMeta({
+    title:         article.seoTitle ?? article.title,
+    description:   article.seoDescription ?? article.excerpt,
+    path:          `/insights/${slug}`,
+    locale,
+    image:         article.image ? `${SITE.url}${article.image}` : undefined,
+    imageAlt:      article.imageAlt,
+    type:          'article',
+    publishedTime: article.date,
+    modifiedTime:  article.updated ?? article.date,
+    section:       article.tag,
+  })
 }
 
 /* Generate all locale × slug combinations so every route is
@@ -47,7 +56,7 @@ function renderInline(text: string) {
     .replace(/`(.+?)`/g,       '<code>$1</code>')
     .replace(
       /\[(.+?)\]\((.+?)\)/g,
-      '<a href="$2" class="text-cyan underline underline-offset-4 hover:text-[#22d4ff] transition-colors" target="_blank" rel="noopener">$1</a>'
+      '<a href="$2" class="text-cyan underline underline-offset-4 hover:text-[#F7B766] transition-colors" target="_blank" rel="noopener">$1</a>'
     )
 }
 
@@ -165,12 +174,20 @@ export default async function ArticlePage({ params }: Props) {
     excerpt:  article.excerpt,
     slug,
     date:     article.date,
+    updated:  article.updated,
     category: article.tag,
+    locale,
+    image:    article.image ? `${SITE.url}${article.image}` : undefined,
   })
+  const crumbs = breadcrumbSchema([
+    { name: t('breadcrumbHome'),     url: `${SITE.url}/${locale}` },
+    { name: t('breadcrumbInsights'), url: `${SITE.url}/${locale}/insights` },
+    { name: article.title,           url: `${SITE.url}/${locale}/insights/${slug}` },
+  ])
 
   const tc       = tagColorCls[article.tagColor] ?? tagColorCls.cyan
   const dateStr  = new Date(article.date).toLocaleDateString(
-    isAr ? 'ar-SA' : 'en-US',
+    isAr ? 'ar-EG' : 'en-US',
     { year: 'numeric', month: 'long', day: 'numeric' }
   )
 
@@ -180,6 +197,10 @@ export default async function ArticlePage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }}
       />
 
       {/* ═══ HEADER ════════════════════════════════════════════ */}
@@ -241,7 +262,7 @@ export default async function ArticlePage({ params }: Props) {
       {/* ═══ CTA ════════════════════════════════════════════════ */}
       <section className="py-16 px-6 border-t border-[rgba(255,255,255,0.05)]" aria-label="CTA">
         <MotionSection className="max-w-[720px] mx-auto">
-          <div className="bg-[#0e0e1c] border border-[rgba(0,198,255,0.15)] rounded-2xl p-8 text-center">
+          <div className="bg-[#0e0e1c] border border-[rgba(238,148,39,0.15)] rounded-2xl p-8 text-center">
             <p className="text-xs font-mono text-cyan tracking-widest uppercase mb-3">
               {article.cta?.eyebrow ?? t('workWithAhmed')}
             </p>
@@ -269,7 +290,7 @@ export default async function ArticlePage({ params }: Props) {
             </Link>
             <Link
               href={`/${locale}/services`}
-              className="text-sm font-mono text-cyan hover:text-[#22d4ff] transition-colors"
+              className="text-sm font-mono text-cyan hover:text-[#F7B766] transition-colors"
             >
               {t('viewServices')}
             </Link>

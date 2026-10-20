@@ -6,13 +6,14 @@ import Script from 'next/script'
 import '../globals.css'
 import { Nav }    from '@/components/Nav'
 import { Footer } from '@/components/Footer'
-import { SITE }   from '@/lib/constants'
+import { SITE, IS_PRODUCTION } from '@/lib/constants'
 import { routing } from '@/i18n/routing'
 import { organizationSchema, personSchema, websiteSchema } from '@/lib/seo'
 import { ConsentBanner } from '@/components/consent/ConsentBanner'
 import { ScrollToTop } from '@/components/ui/ScrollToTop'
 
-const GA_ID = 'G-X89XZE17WL'
+// Set per site in Vercel (Production only). Empty on previews and locally, so no tracking there.
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 
 export const viewport: Viewport = {
   themeColor:   '#080810',
@@ -43,10 +44,12 @@ export const metadata: Metadata = {
   authors:   [{ name: 'Ahmed Djobs', url: SITE.url }],
   creator:   'Ahmed Djobs',
   publisher: 'Ahmed Djobs',
-  robots: {
-    index: true, follow: true,
-    googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
-  },
+  robots: IS_PRODUCTION
+    ? {
+        index: true, follow: true,
+        googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
+      }
+    : { index: false, follow: false },
   openGraph: {
     type:        'website',
     url:          SITE.url,
@@ -73,7 +76,6 @@ export const metadata: Metadata = {
     icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
   },
   manifest: '/site.webmanifest',
-  verification: { google: 'your-google-site-verification-token' },
 }
 
 type Props = {
@@ -113,6 +115,8 @@ export default async function LocaleLayout({ children, params }: Props) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       </head>
       <body className="bg-base text-[#f0f0fa] antialiased">
+        {GA_ID && (
+          <>
         <script dangerouslySetInnerHTML={{ __html: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -142,6 +146,8 @@ export default async function LocaleLayout({ children, params }: Props) {
           gtag('js', new Date());
           gtag('config', '${GA_ID}', { page_path: window.location.pathname });
         `}</Script>
+          </>
+        )}
 
         <NextIntlClientProvider messages={messages}>
           <Nav locale={locale} />

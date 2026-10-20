@@ -99,8 +99,8 @@ const certifications = [
 const skills = [
   {
     category: 'Platform, Fintech & Product',
-    color: 'text-[#00ffaa]',
-    border: 'border-[rgba(0,255,170,0.12)]',
+    color: 'text-[#7FB8E8]',
+    border: 'border-[rgba(127,184,232,0.12)]',
     items: [
       'Digital Platform Strategy & Architecture',
       'Product Scoping & Roadmap Definition',
@@ -114,8 +114,8 @@ const skills = [
   },
   {
     category: 'Engineering & Infrastructure',
-    color: 'text-[#ffb340]',
-    border: 'border-[rgba(255,179,64,0.12)]',
+    color: 'text-[#F7B766]',
+    border: 'border-[rgba(247,183,102,0.12)]',
     items: [
       'React.js, Next.js, Node.js, FastAPI, C#/.NET',
       'React Native & Flutter (Mobile)',
@@ -130,7 +130,7 @@ const skills = [
   {
     category: 'Cybersecurity & Security',
     color: 'text-cyan',
-    border: 'border-[rgba(0,198,255,0.15)]',
+    border: 'border-[rgba(238,148,39,0.15)]',
     items: [
       'Threat Modelling (STRIDE, PASTA)',
       'Secure SDLC & DevSecOps',
@@ -145,7 +145,7 @@ const skills = [
   {
     category: 'Blockchain, Web3 & AI',
     color: 'text-purple',
-    border: 'border-[rgba(123,97,255,0.15)]',
+    border: 'border-[rgba(77,159,220,0.15)]',
     items: [
       'Smart Contract Development & Audit',
       'DeFi Protocols & DAO Architecture',
@@ -311,7 +311,7 @@ export default function AboutPage() {
                     <span className="text-xs font-mono text-[#6e6e8e] whitespace-nowrap mt-1">{item.period}</span>
                   )}
                 </div>
-                <p className="text-sm font-mono text-[#b8a8ff] mb-3">{item.credential}</p>
+                <p className="text-sm font-mono text-[#7FB8E8] mb-3">{item.credential}</p>
                 <p className="text-[0.875rem] text-[#9898b8] leading-relaxed">{item.detail}</p>
               </div>
             ))}
@@ -358,7 +358,7 @@ export default function AboutPage() {
           </div>
           <div className="flex flex-col items-center gap-2">
             <p className="text-[0.65rem] font-mono text-[#6e6e8e] tracking-widest uppercase">Scan to save contact</p>
-            <div className="inline-block rounded-xl overflow-hidden border border-[rgba(0,198,255,0.2)] p-2 bg-[#0a0a18]">
+            <div className="inline-block rounded-xl overflow-hidden border border-[rgba(238,148,39,0.2)] p-2 bg-[#0a0a18]">
               <ContactQR size={110} />
             </div>
           </div>

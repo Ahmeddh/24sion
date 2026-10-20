@@ -38,14 +38,14 @@ export function NewsletterForm({ layout = 'inline', className }: NewsletterFormP
       <div
         className={cn(
           'flex items-center gap-3 px-5 py-3.5 rounded-xl',
-          'bg-[rgba(0,255,170,0.07)] border border-[rgba(0,255,170,0.2)]',
+          'bg-[rgba(127,184,232,0.07)] border border-[rgba(127,184,232,0.2)]',
           className,
         )}
         role="status"
         aria-live="polite"
       >
-        <span className="text-[#00ffaa] text-lg" aria-hidden="true">✓</span>
-        <p className="text-sm font-medium text-[#00ffaa]">{result.message}</p>
+        <span className="text-[#7FB8E8] text-lg" aria-hidden="true">✓</span>
+        <p className="text-sm font-medium text-[#7FB8E8]">{result.message}</p>
       </div>
     )
   }
@@ -105,7 +105,7 @@ export function NewsletterForm({ layout = 'inline', className }: NewsletterFormP
         className={cn(
           'inline-flex items-center justify-center gap-2 font-semibold text-sm',
           'bg-cyan text-[#06060f] rounded-[10px] transition-all duration-200',
-          'hover:bg-[#22d4ff] hover:-translate-y-px hover:shadow-[0_4px_16px_rgba(0,198,255,0.3)]',
+          'hover:bg-[#F7B766] hover:-translate-y-px hover:shadow-[0_4px_16px_rgba(238,148,39,0.3)]',
           'active:translate-y-0 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none',
           'whitespace-nowrap select-none',
           layout === 'stacked' ? 'w-full px-5 py-3' : 'px-5 py-2.5',

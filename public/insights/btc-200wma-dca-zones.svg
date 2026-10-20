@@ -43,7 +43,7 @@ L 643.035866 219.476675
 L 643.035866 208.923453 
 L 49.408594 208.923453 
 z
-" clip-path="url(#p10bc3728ae)" style="fill: #00c6ff; opacity: 0.13; stroke: #00c6ff; stroke-linejoin: miter"/>
+" clip-path="url(#p10bc3728ae)" style="fill: #7FB8E8; opacity: 0.13; stroke: #7FB8E8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
     <path d="M 49.408594 247.37054 
@@ -51,7 +51,7 @@ L 643.035866 247.37054
 L 643.035866 234.231565 
 L 49.408594 234.231565 
 z
-" clip-path="url(#p10bc3728ae)" style="fill: #ffb340; opacity: 0.13; stroke: #ffb340; stroke-linejoin: miter"/>
+" clip-path="url(#p10bc3728ae)" style="fill: #EE9427; opacity: 0.13; stroke: #EE9427; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
     <path d="M 49.408594 274.295935 
@@ -59,7 +59,7 @@ L 643.035866 274.295935
 L 643.035866 264.321643 
 L 49.408594 264.321643 
 z
-" clip-path="url(#p10bc3728ae)" style="fill: #7b61ff; opacity: 0.13; stroke: #7b61ff; stroke-linejoin: miter"/>
+" clip-path="url(#p10bc3728ae)" style="fill: #4D9FDC; opacity: 0.13; stroke: #4D9FDC; stroke-linejoin: miter"/>
    </g>
    <g id="matplotlib.axis_1">
     <g id="xtick_1">
@@ -341,16 +341,16 @@ L 643.035866 426.237969
 " style="fill: none; stroke: #ffffff; stroke-opacity: 0.12; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="text_18">
-    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #00c6ff" x="616.052809" y="217.097408" transform="rotate(-0 616.052809 217.097408)">  DCA Zone 1  $55K–60K</text>
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #7FB8E8" x="616.052809" y="217.097408" transform="rotate(-0 616.052809 217.097408)">  DCA Zone 1  $55K–60K</text>
    </g>
    <g id="text_19">
-    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #ffb340" x="616.052809" y="243.698396" transform="rotate(-0 616.052809 243.698396)">  Golden Zone  $43.7K–48.7K</text>
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #EE9427" x="616.052809" y="243.698396" transform="rotate(-0 616.052809 243.698396)">  Golden Zone  $43.7K–48.7K</text>
    </g>
    <g id="text_20">
-    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #7b61ff" x="616.052809" y="272.206132" transform="rotate(-0 616.052809 272.206132)">  Diamond Zone  $35K–38K</text>
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #4D9FDC" x="616.052809" y="272.206132" transform="rotate(-0 616.052809 272.206132)">  Diamond Zone  $35K–38K</text>
    </g>
    <g id="text_21">
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #ff5470" x="616.052809" y="291.774627" transform="rotate(-0 616.052809 291.774627)">  Invalidation  weekly close &lt; $31K</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #F7B766" x="616.052809" y="291.774627" transform="rotate(-0 616.052809 291.774627)">  Invalidation  weekly close &lt; $31K</text>
    </g>
    <g id="patch_8">
     <path d="M 504.353424 95.034324 
@@ -374,7 +374,7 @@ Q 300.061621 380.090425 268.754745 371.155288
    <g id="line2d_35">
     <path d="M 49.408594 289.015252 
 L 643.035866 289.015252 
-" clip-path="url(#p10bc3728ae)" style="fill: none; stroke-dasharray: 7,5.6; stroke-dashoffset: 0; stroke: #ff5470; stroke-width: 1.4"/>
+" clip-path="url(#p10bc3728ae)" style="fill: none; stroke-dasharray: 7,5.6; stroke-dashoffset: 0; stroke: #F7B766; stroke-width: 1.4"/>
    </g>
    <g id="line2d_36">
     <path d="M 76.391652 323.961714 
@@ -663,14 +663,14 @@ L 612.265713 182.917455
 L 614.159261 200.996109 
 L 616.052809 205.328036 
 L 616.052809 205.328036 
-" clip-path="url(#p10bc3728ae)" style="fill: none; stroke: #00c6ff; stroke-width: 1.8; stroke-linecap: square"/>
+" clip-path="url(#p10bc3728ae)" style="fill: none; stroke: #7FB8E8; stroke-width: 1.8; stroke-linecap: square"/>
    </g>
    <g id="legend_1">
     <g id="line2d_37">
      <path d="M 58.408594 44.176406 
 L 68.408594 44.176406 
 L 78.408594 44.176406 
-" style="fill: none; stroke: #00c6ff; stroke-width: 1.8; stroke-linecap: square"/>
+" style="fill: none; stroke: #7FB8E8; stroke-width: 1.8; stroke-linecap: square"/>
     </g>
     <g id="text_25">
      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #c0c0d8" x="86.408594" y="47.676406" transform="rotate(-0 86.408594 47.676406)">BTC/USDT weekly close</text>
@@ -679,7 +679,7 @@ L 78.408594 44.176406
      <path d="M 58.408594 58.854531 
 L 68.408594 58.854531 
 L 78.408594 58.854531 
-" style="fill: none; stroke: #ffb340; stroke-width: 2.2; stroke-linecap: square"/>
+" style="fill: none; stroke: #EE9427; stroke-width: 2.2; stroke-linecap: square"/>
     </g>
     <g id="text_26">
      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #c0c0d8" x="86.408594" y="62.354531" transform="rotate(-0 86.408594 62.354531)">200-week MA (now ≈ $62K)</text>
@@ -773,7 +773,7 @@ L 610.372165 205.852579
 L 612.265713 205.34723 
 L 614.159261 204.943319 
 L 616.052809 204.573722 
-" clip-path="url(#p10bc3728ae)" style="fill: none; stroke: #ffb340; stroke-width: 2.2; stroke-linecap: square"/>
+" clip-path="url(#p10bc3728ae)" style="fill: none; stroke: #EE9427; stroke-width: 2.2; stroke-linecap: square"/>
    </g>
   </g>
  </g>
