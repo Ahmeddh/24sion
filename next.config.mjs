@@ -7,6 +7,15 @@ const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
   },
+  async redirects() {
+    return [
+      {
+        source: '/:locale/insights/bitcoin-200-week-ma-dca-plan',
+        destination: 'https://24sion.com/:locale',
+        permanent: true,
+      },
+    ]
+  },
   async headers() {
     return [
       {
