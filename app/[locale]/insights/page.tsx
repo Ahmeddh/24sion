@@ -24,19 +24,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const tagColorMap: Record<string, string> = {
-  'Cybersecurity':              'text-cyan border-[rgba(0,198,255,0.25)] bg-[rgba(0,198,255,0.07)]',
-  'Blockchain':                 'text-purple border-[rgba(123,97,255,0.25)] bg-[rgba(123,97,255,0.07)]',
-  'Digital Product Management': 'text-[#00ffaa] border-[rgba(0,255,170,0.2)] bg-[rgba(0,255,170,0.06)]',
-  'Digital Strategy':           'text-[#ffb340] border-[rgba(255,179,64,0.2)] bg-[rgba(255,179,64,0.06)]',
-  'Web3':                       'text-purple border-[rgba(123,97,255,0.25)] bg-[rgba(123,97,255,0.07)]',
+  'Cybersecurity':              'text-cyan border-[rgba(238,148,39,0.25)] bg-[rgba(238,148,39,0.07)]',
+  'Blockchain':                 'text-purple border-[rgba(77,159,220,0.25)] bg-[rgba(77,159,220,0.07)]',
+  'Digital Product Management': 'text-[#7FB8E8] border-[rgba(127,184,232,0.2)] bg-[rgba(127,184,232,0.06)]',
+  'Digital Strategy':           'text-[#F7B766] border-[rgba(247,183,102,0.2)] bg-[rgba(247,183,102,0.06)]',
+  'Web3':                       'text-purple border-[rgba(77,159,220,0.25)] bg-[rgba(77,159,220,0.07)]',
 }
 
 const tagColorMapAr: Record<string, string> = {
-  'أمن سيبراني':           'text-cyan border-[rgba(0,198,255,0.25)] bg-[rgba(0,198,255,0.07)]',
-  'بلوكتشين':              'text-purple border-[rgba(123,97,255,0.25)] bg-[rgba(123,97,255,0.07)]',
-  'إدارة مشاريع رقمية':   'text-[#00ffaa] border-[rgba(0,255,170,0.2)] bg-[rgba(0,255,170,0.06)]',
-  'الاستراتيجية الرقمية':  'text-[#ffb340] border-[rgba(255,179,64,0.2)] bg-[rgba(255,179,64,0.06)]',
-  'ويب 3':                 'text-purple border-[rgba(123,97,255,0.25)] bg-[rgba(123,97,255,0.07)]',
+  'أمن سيبراني':           'text-cyan border-[rgba(238,148,39,0.25)] bg-[rgba(238,148,39,0.07)]',
+  'بلوكتشين':              'text-purple border-[rgba(77,159,220,0.25)] bg-[rgba(77,159,220,0.07)]',
+  'إدارة مشاريع رقمية':   'text-[#7FB8E8] border-[rgba(127,184,232,0.2)] bg-[rgba(127,184,232,0.06)]',
+  'الاستراتيجية الرقمية':  'text-[#F7B766] border-[rgba(247,183,102,0.2)] bg-[rgba(247,183,102,0.06)]',
+  'ويب 3':                 'text-purple border-[rgba(77,159,220,0.25)] bg-[rgba(77,159,220,0.07)]',
 }
 
 /* Single source of truth: titles, excerpts and dates come from /content.
@@ -106,7 +106,7 @@ export default async function InsightsPage({ params }: Props) {
           </MotionSection>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {featured.map((post, i) => {
-              const tc = activeTagMap[post.tag] ?? 'text-cyan border-[rgba(0,198,255,0.25)] bg-[rgba(0,198,255,0.07)]'
+              const tc = activeTagMap[post.tag] ?? 'text-cyan border-[rgba(238,148,39,0.25)] bg-[rgba(238,148,39,0.07)]'
               return (
                 <MotionSection key={post.slug} delay={i * 0.1}>
                 <Link
@@ -145,7 +145,7 @@ export default async function InsightsPage({ params }: Props) {
           </MotionSection>
           <div className="flex flex-col gap-4">
             {rest.map((post, i) => {
-              const tc = activeTagMap[post.tag] ?? 'text-cyan border-[rgba(0,198,255,0.25)] bg-[rgba(0,198,255,0.07)]'
+              const tc = activeTagMap[post.tag] ?? 'text-cyan border-[rgba(238,148,39,0.25)] bg-[rgba(238,148,39,0.07)]'
               return (
                 <MotionSection key={post.slug} delay={i * 0.07}>
                 <Link

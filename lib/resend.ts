@@ -43,18 +43,18 @@ export function welcomeEmailHtml(email: string): string {
                     <table cellpadding="0" cellspacing="0" border="0">
                       <tr>
                         <td style="padding:2px;">
-                          <div style="width:10px;height:10px;border:1.5px solid #00c6ff;border-radius:3px;"></div>
+                          <div style="width:10px;height:10px;border:1.5px solid #EE9427;border-radius:3px;"></div>
                         </td>
                         <td style="padding:2px;">
-                          <div style="width:10px;height:10px;border:1.5px solid #7b61ff;border-radius:3px;"></div>
+                          <div style="width:10px;height:10px;border:1.5px solid #4D9FDC;border-radius:3px;"></div>
                         </td>
                       </tr>
                       <tr>
                         <td style="padding:2px;">
-                          <div style="width:10px;height:10px;border:1.5px solid #7b61ff;border-radius:3px;"></div>
+                          <div style="width:10px;height:10px;border:1.5px solid #4D9FDC;border-radius:3px;"></div>
                         </td>
                         <td style="padding:2px;">
-                          <div style="width:10px;height:10px;border:1.5px solid #00c6ff;border-radius:3px;"></div>
+                          <div style="width:10px;height:10px;border:1.5px solid #EE9427;border-radius:3px;"></div>
                         </td>
                       </tr>
                     </table>
@@ -73,7 +73,7 @@ export function welcomeEmailHtml(email: string): string {
             <td style="background:#0e0e1c;border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:40px 40px 36px;">
 
               <!-- Accent bar -->
-              <div style="width:40px;height:3px;background:linear-gradient(90deg,#00c6ff,#7b61ff);border-radius:2px;margin-bottom:28px;"></div>
+              <div style="width:40px;height:3px;background:linear-gradient(90deg,#EE9427,#4D9FDC);border-radius:2px;margin-bottom:28px;"></div>
 
               <h1 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#f0f0fa;letter-spacing:-0.02em;line-height:1.2;">
                 You're in.
@@ -90,7 +90,7 @@ export function welcomeEmailHtml(email: string): string {
               <!-- CTA button -->
               <table cellpadding="0" cellspacing="0" border="0">
                 <tr>
-                  <td style="background:#00c6ff;border-radius:10px;">
+                  <td style="background:#EE9427;border-radius:10px;">
                     <a href="https://djobs.net/insights"
                        style="display:inline-block;padding:12px 24px;font-size:14px;font-weight:600;color:#06060f;text-decoration:none;letter-spacing:0.01em;">
                       Read Latest Insights →

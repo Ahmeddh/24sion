@@ -171,7 +171,7 @@ export function ConsentBanner() {
             <div className="flex flex-wrap gap-3">
               <button
                 onClick={acceptAll}
-                className="px-4 py-2 rounded-lg bg-[#00c6ff] text-[#080810] text-sm font-bold font-mono hover:bg-[#22d4ff] transition-colors"
+                className="px-4 py-2 rounded-lg bg-[#EE9427] text-[#080810] text-sm font-bold font-mono hover:bg-[#F7B766] transition-colors"
               >
                 {t.acceptAll}
               </button>
@@ -228,7 +228,7 @@ export function ConsentBanner() {
                   <p className="text-sm font-bold text-[#f0f0fa] font-sans mb-1">{t.categories.essential.name}</p>
                   <p className="text-xs text-[#9898b8] leading-relaxed">{t.categories.essential.desc}</p>
                 </div>
-                <span className="text-xs font-mono text-[#00c6ff] whitespace-nowrap mt-1">{t.alwaysOn}</span>
+                <span className="text-xs font-mono text-[#EE9427] whitespace-nowrap mt-1">{t.alwaysOn}</span>
               </div>
 
               {/* Analytics */}
@@ -271,7 +271,7 @@ export function ConsentBanner() {
             <div className="flex flex-wrap gap-3">
               <button
                 onClick={savePreferences}
-                className="px-4 py-2 rounded-lg bg-[#00c6ff] text-[#080810] text-sm font-bold font-mono hover:bg-[#22d4ff] transition-colors"
+                className="px-4 py-2 rounded-lg bg-[#EE9427] text-[#080810] text-sm font-bold font-mono hover:bg-[#F7B766] transition-colors"
               >
                 {t.savePreferences}
               </button>
@@ -297,7 +297,7 @@ function Toggle({ checked, onChange }: { checked: boolean; onChange: (v: boolean
       onClick={() => onChange(!checked)}
       className={`relative inline-flex h-6 w-11 flex-shrink-0 rounded-full border-2 transition-colors duration-200 focus:outline-none ${
         checked
-          ? 'bg-[#00c6ff] border-[#00c6ff]'
+          ? 'bg-[#EE9427] border-[#EE9427]'
           : 'bg-[#1e1e38] border-[rgba(255,255,255,0.1)]'
       }`}
     >

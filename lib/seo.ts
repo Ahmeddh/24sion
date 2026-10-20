@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { SITE } from './constants'
+import { SITE, IS_PRODUCTION } from './constants'
 
 export function buildMeta(opts: {
   title:          string
@@ -33,7 +33,7 @@ export function buildMeta(opts: {
         },
       } : {}),
     },
-    robots: opts.noindex
+    robots: (opts.noindex || !IS_PRODUCTION)
       ? { index: false, follow: false }
       : { index: true, follow: true, googleBot: { index: true, follow: true } },
     openGraph: {

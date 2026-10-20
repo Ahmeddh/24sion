@@ -3,18 +3,12 @@ import createNextIntlPlugin from 'next-intl/plugin'
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts')
 
 /** @type {import('next').NextConfig} */
+/* Only the production deployment may be indexed; dev and preview stay private */
+const isProduction = (process.env.VERCEL_ENV ?? (process.env.NODE_ENV === 'production' ? 'production' : 'development')) === 'production'
+
 const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
-  },
-  async redirects() {
-    return [
-      {
-        source: '/:locale/insights/bitcoin-200-week-ma-dca-plan',
-        destination: 'https://24sion.com/:locale',
-        permanent: true,
-      },
-    ]
   },
   async headers() {
     return [
@@ -25,6 +19,7 @@ const nextConfig = {
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'X-XSS-Protection', value: '1; mode=block' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          ...(isProduction ? [] : [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }]),
         ],
       },
     ]

@@ -17,7 +17,7 @@ export async function ContactQR({ size = 120 }: { size?: number }) {
   const svgString = await QRCode.toString(vCard, {
     type: 'svg',
     margin: 1,
-    color: { dark: '#00c6ff', light: '#0a0a18' },
+    color: { dark: '#EE9427', light: '#0a0a18' },
     errorCorrectionLevel: 'M',
   })
 

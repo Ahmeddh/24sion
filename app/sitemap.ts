@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { SITE } from '@/lib/constants'
+import { SITE, IS_PRODUCTION } from '@/lib/constants'
 import { articles } from '@/content/articles'
 
 const locales = ['en', 'ar']
@@ -16,6 +16,7 @@ function alternates(path: string) {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  if (!IS_PRODUCTION) return []
   const base = SITE.url
   const entries: MetadataRoute.Sitemap = []
 

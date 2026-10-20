@@ -68,3 +68,7 @@ export const SERVICES = [
 ] as const
 
 export type ServiceColor = 'cyan' | 'purple' | 'green' | 'amber'
+
+/* True only on the production deployment (VERCEL_ENV=production) or a local production build */
+export const IS_PRODUCTION =
+  (process.env.VERCEL_ENV ?? (process.env.NODE_ENV === 'production' ? 'production' : 'development')) === 'production'

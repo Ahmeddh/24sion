@@ -25,7 +25,7 @@ export function Logo({ className, size = 28, showWordmark = true }: LogoProps) {
         xmlns="http://www.w3.org/2000/svg"
         style={{ width: size, height: size, flexShrink: 0 }}
         aria-hidden="true"
-        className="transition-all duration-300 group-hover:[filter:drop-shadow(0_0_8px_rgba(0,198,255,0.6))]"
+        className="transition-all duration-300 group-hover:[filter:drop-shadow(0_0_8px_rgba(238,148,39,0.6))]"
       >
         <rect x="2"  y="2"  width="14" height="14" rx="3" stroke="white" strokeWidth="1.8" fill="none"/>
         <rect x="24" y="2"  width="14" height="14" rx="3" stroke="white" strokeWidth="1.8" fill="none"/>

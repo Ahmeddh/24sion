@@ -22,8 +22,8 @@ interface CTAButtonProps {
 /* Scale tokens: hover → 1.02 (--scale-hover), active → 0.98 (--scale-active)
    Duration: 120ms (--motion-fast), easing: --ease-out-soft               */
 const variants: Record<Variant, string> = {
-  primary:   'bg-cyan text-white hover:bg-[#22d4ff] hover:scale-[1.02] hover:shadow-[0_6px_20px_rgba(0,198,255,0.35)]',
-  ghost:     'bg-transparent text-[#9898b8] border border-[rgba(255,255,255,0.09)] hover:text-[#f0f0fa] hover:border-[rgba(0,198,255,0.3)] hover:bg-[rgba(0,198,255,0.08)] hover:scale-[1.02]',
+  primary:   'bg-[#0C4F8C] text-white hover:bg-[#1565AD] hover:scale-[1.02] hover:shadow-[0_6px_20px_rgba(12,79,140,0.45)]',
+  ghost:     'bg-transparent text-[#9898b8] border border-[rgba(255,255,255,0.09)] hover:text-[#f0f0fa] hover:border-[rgba(238,148,39,0.3)] hover:bg-[rgba(238,148,39,0.08)] hover:scale-[1.02]',
   outline:   'bg-transparent text-[#f0f0fa] border border-[rgba(255,255,255,0.09)] hover:border-cyan hover:text-cyan hover:scale-[1.02]',
   secondary: 'bg-[#141428] text-[#9898b8] border border-[rgba(255,255,255,0.09)] hover:bg-[#1a1a30] hover:text-[#f0f0fa] hover:scale-[1.02]',
 }

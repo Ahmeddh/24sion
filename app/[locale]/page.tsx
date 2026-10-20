@@ -16,14 +16,14 @@ import {
 } from '@/components/ui/Icons'
 
 const colorMap: Record<string, { accent: string; glow: string; badge: string; ring: string }> = {
-  cyan:   { accent: 'text-cyan',      glow: 'shadow-[0_0_30px_rgba(0,198,255,0.15)]',  badge: 'bg-[rgba(0,198,255,0.1)] text-cyan border-[rgba(0,198,255,0.25)]',     ring: 'border-[rgba(0,198,255,0.2)]'  },
-  purple: { accent: 'text-purple',    glow: 'shadow-[0_0_30px_rgba(123,97,255,0.15)]', badge: 'bg-[rgba(123,97,255,0.1)] text-purple border-[rgba(123,97,255,0.25)]', ring: 'border-[rgba(123,97,255,0.2)]' },
-  green:  { accent: 'text-[#00ffaa]', glow: 'shadow-[0_0_30px_rgba(0,255,170,0.12)]',  badge: 'bg-[rgba(0,255,170,0.08)] text-[#00ffaa] border-[rgba(0,255,170,0.2)]', ring: 'border-[rgba(0,255,170,0.15)]' },
-  amber:  { accent: 'text-[#ffb340]', glow: 'shadow-[0_0_30px_rgba(255,179,64,0.12)]', badge: 'bg-[rgba(255,179,64,0.08)] text-[#ffb340] border-[rgba(255,179,64,0.2)]', ring: 'border-[rgba(255,179,64,0.15)]' },
+  cyan:   { accent: 'text-cyan',      glow: 'shadow-[0_0_30px_rgba(238,148,39,0.15)]',  badge: 'bg-[rgba(238,148,39,0.1)] text-cyan border-[rgba(238,148,39,0.25)]',     ring: 'border-[rgba(238,148,39,0.2)]'  },
+  purple: { accent: 'text-purple',    glow: 'shadow-[0_0_30px_rgba(77,159,220,0.15)]', badge: 'bg-[rgba(77,159,220,0.1)] text-purple border-[rgba(77,159,220,0.25)]', ring: 'border-[rgba(77,159,220,0.2)]' },
+  green:  { accent: 'text-[#7FB8E8]', glow: 'shadow-[0_0_30px_rgba(127,184,232,0.12)]',  badge: 'bg-[rgba(127,184,232,0.08)] text-[#7FB8E8] border-[rgba(127,184,232,0.2)]', ring: 'border-[rgba(127,184,232,0.15)]' },
+  amber:  { accent: 'text-[#F7B766]', glow: 'shadow-[0_0_30px_rgba(247,183,102,0.12)]', badge: 'bg-[rgba(247,183,102,0.08)] text-[#F7B766] border-[rgba(247,183,102,0.2)]', ring: 'border-[rgba(247,183,102,0.15)]' },
 }
 
 const expertiseIcons = [SearchIcon, ChainIcon, LockIcon, GlobeIcon, ClipboardIcon, LayersIcon]
-const expertiseColors = ['text-cyan', 'text-purple', 'text-cyan', 'text-purple', 'text-[#00ffaa]', 'text-[#ffb340]']
+const expertiseColors = ['text-cyan', 'text-purple', 'text-cyan', 'text-purple', 'text-[#7FB8E8]', 'text-[#F7B766]']
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -95,7 +95,7 @@ function HomeContent({ locale }: { locale: string }) {
 
         <div className="relative z-10 max-w-4xl mx-auto">
           <FadeIn delay={0.05}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[rgba(0,198,255,0.2)] bg-[rgba(0,198,255,0.06)] text-cyan text-xs font-mono tracking-widest uppercase mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[rgba(238,148,39,0.2)] bg-[rgba(238,148,39,0.06)] text-cyan text-xs font-mono tracking-widest uppercase mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse" />
               {t('badge')}
               <span className="flex items-center" aria-label="from Sudan">
@@ -171,11 +171,11 @@ function HomeContent({ locale }: { locale: string }) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {proofItems.map((item, i) => (
               <MotionSection key={item.label} delay={i * 0.1}>
-                <div className="relative bg-[#0e0e1c] border border-[rgba(255,255,255,0.07)] hover:border-[rgba(0,198,255,0.18)] rounded-2xl p-7 transition-all duration-200 h-full flex flex-col">
+                <div className="relative bg-[#0e0e1c] border border-[rgba(255,255,255,0.07)] hover:border-[rgba(238,148,39,0.18)] rounded-2xl p-7 transition-all duration-200 h-full flex flex-col">
                   <div className="text-2xl md:text-3xl font-bold font-mono text-cyan mb-1">{item.stat}</div>
                   <div className="text-sm font-semibold text-[#f0f0fa] mb-3">{item.label}</div>
                   <p className="text-[0.82rem] text-[#5a5a7a] leading-relaxed flex-1">{item.detail}</p>
-                  <span className="mt-5 text-[0.62rem] font-mono tracking-[0.15em] uppercase px-2.5 py-1 rounded-full border border-[rgba(0,198,255,0.2)] bg-[rgba(0,198,255,0.06)] text-cyan self-start">
+                  <span className="mt-5 text-[0.62rem] font-mono tracking-[0.15em] uppercase px-2.5 py-1 rounded-full border border-[rgba(238,148,39,0.2)] bg-[rgba(238,148,39,0.06)] text-cyan self-start">
                     {item.tag}
                   </span>
                 </div>
@@ -289,10 +289,10 @@ function HomeContent({ locale }: { locale: string }) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {insightCards.map((post, i) => {
               const tagColor = post.tagColor === 'cyan'
-                ? 'text-cyan border-[rgba(0,198,255,0.25)] bg-[rgba(0,198,255,0.08)]'
+                ? 'text-cyan border-[rgba(238,148,39,0.25)] bg-[rgba(238,148,39,0.08)]'
                 : post.tagColor === 'purple'
-                ? 'text-purple border-[rgba(123,97,255,0.25)] bg-[rgba(123,97,255,0.08)]'
-                : 'text-[#00ffaa] border-[rgba(0,255,170,0.2)] bg-[rgba(0,255,170,0.06)]'
+                ? 'text-purple border-[rgba(77,159,220,0.25)] bg-[rgba(77,159,220,0.08)]'
+                : 'text-[#7FB8E8] border-[rgba(127,184,232,0.2)] bg-[rgba(127,184,232,0.06)]'
               return (
                 <MotionSection key={post.slug} delay={i * 0.08}>
                   <Link
@@ -328,7 +328,7 @@ function HomeContent({ locale }: { locale: string }) {
       <section className="py-24 px-6" aria-label="Book a session">
         <div className="max-w-[900px] mx-auto">
           <MotionSection>
-            <div className="relative text-center bg-[#0c0c1e] border border-[rgba(0,198,255,0.15)] rounded-3xl px-8 py-16 overflow-hidden">
+            <div className="relative text-center bg-[#0c0c1e] border border-[rgba(238,148,39,0.15)] rounded-3xl px-8 py-16 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-cyan/[0.04] via-transparent to-purple/[0.04] pointer-events-none" aria-hidden="true" />
               <p className="text-xs font-mono text-cyan tracking-[0.2em] uppercase mb-4">{t('ctaBandLabel')}</p>
               <h2 className="text-3xl md:text-4xl font-bold font-sans text-[#f0f0fa] mb-4">{t('ctaBandTitle')}</h2>

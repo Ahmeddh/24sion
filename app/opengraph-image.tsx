@@ -23,19 +23,19 @@ export default async function Image() {
         <div style={{
           position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
           backgroundImage:
-            'linear-gradient(rgba(0,198,255,0.05) 1px, transparent 1px),' +
-            'linear-gradient(90deg, rgba(0,198,255,0.05) 1px, transparent 1px)',
+            'linear-gradient(rgba(238,148,39,0.05) 1px, transparent 1px),' +
+            'linear-gradient(90deg, rgba(238,148,39,0.05) 1px, transparent 1px)',
           backgroundSize: '72px 72px',
         }} />
 
         {/* ── Gradient overlays ── */}
         <div style={{
           position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
-          background: 'radial-gradient(ellipse 80% 60% at 0% 0%, rgba(0,198,255,0.12) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse 80% 60% at 0% 0%, rgba(238,148,39,0.12) 0%, transparent 60%)',
         }} />
         <div style={{
           position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
-          background: 'radial-gradient(ellipse 60% 60% at 100% 100%, rgba(123,97,255,0.14) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse 60% 60% at 100% 100%, rgba(77,159,220,0.14) 0%, transparent 60%)',
         }} />
         <div style={{
           position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
@@ -50,7 +50,7 @@ export default async function Image() {
         }}>
           {/* Row 1 */}
           <div style={{ display: 'flex', gap: 0 }}>
-            {[['#00c6ff', 'rgba(0,198,255,0.06)'], ['#7b61ff', 'rgba(123,97,255,0.06)'], ['#00c6ff', 'rgba(0,198,255,0.06)']].map(([color, bg], col) => (
+            {[['#EE9427', 'rgba(238,148,39,0.06)'], ['#4D9FDC', 'rgba(77,159,220,0.06)'], ['#EE9427', 'rgba(238,148,39,0.06)']].map(([color, bg], col) => (
               <div key={col} style={{ width: 56, height: 56, margin: 6, borderRadius: 12, border: `1.5px solid ${color}`, background: bg, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div style={{ width: 8, height: 8, borderRadius: 4, background: color, opacity: 0.6 }} />
               </div>
@@ -58,7 +58,7 @@ export default async function Image() {
           </div>
           {/* Row 2 */}
           <div style={{ display: 'flex', gap: 0 }}>
-            {[['#7b61ff', 'rgba(123,97,255,0.06)'], ['#00c6ff', 'rgba(0,198,255,0.06)'], ['#7b61ff', 'rgba(123,97,255,0.06)']].map(([color, bg], col) => (
+            {[['#4D9FDC', 'rgba(77,159,220,0.06)'], ['#EE9427', 'rgba(238,148,39,0.06)'], ['#4D9FDC', 'rgba(77,159,220,0.06)']].map(([color, bg], col) => (
               <div key={col} style={{ width: 56, height: 56, margin: 6, borderRadius: 12, border: `1.5px solid ${color}`, background: bg, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div style={{ width: 8, height: 8, borderRadius: 4, background: color, opacity: 0.6 }} />
               </div>
@@ -66,7 +66,7 @@ export default async function Image() {
           </div>
           {/* Row 3 */}
           <div style={{ display: 'flex', gap: 0 }}>
-            {[['#00c6ff', 'rgba(0,198,255,0.06)'], ['#7b61ff', 'rgba(123,97,255,0.06)'], ['#00c6ff', 'rgba(0,198,255,0.06)']].map(([color, bg], col) => (
+            {[['#EE9427', 'rgba(238,148,39,0.06)'], ['#4D9FDC', 'rgba(77,159,220,0.06)'], ['#EE9427', 'rgba(238,148,39,0.06)']].map(([color, bg], col) => (
               <div key={col} style={{ width: 56, height: 56, margin: 6, borderRadius: 12, border: `1.5px solid ${color}`, background: bg, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div style={{ width: 8, height: 8, borderRadius: 4, background: color, opacity: 0.6 }} />
               </div>
@@ -87,12 +87,12 @@ export default async function Image() {
           <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
               <div style={{ display: 'flex', gap: 5 }}>
-                <div style={{ width: 14, height: 14, borderRadius: 4, border: '2px solid #00c6ff' }} />
-                <div style={{ width: 14, height: 14, borderRadius: 4, border: '2px solid #7b61ff' }} />
+                <div style={{ width: 14, height: 14, borderRadius: 4, border: '2px solid #EE9427' }} />
+                <div style={{ width: 14, height: 14, borderRadius: 4, border: '2px solid #4D9FDC' }} />
               </div>
               <div style={{ display: 'flex', gap: 5 }}>
-                <div style={{ width: 14, height: 14, borderRadius: 4, border: '2px solid #7b61ff' }} />
-                <div style={{ width: 14, height: 14, borderRadius: 4, border: '2px solid #00c6ff' }} />
+                <div style={{ width: 14, height: 14, borderRadius: 4, border: '2px solid #4D9FDC' }} />
+                <div style={{ width: 14, height: 14, borderRadius: 4, border: '2px solid #EE9427' }} />
               </div>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
@@ -110,14 +110,14 @@ export default async function Image() {
             {/* Category badge */}
             <div style={{
               display: 'flex', alignItems: 'center', gap: 8,
-              background: 'rgba(0,198,255,0.08)',
-              border: '1px solid rgba(0,198,255,0.25)',
+              background: 'rgba(238,148,39,0.08)',
+              border: '1px solid rgba(238,148,39,0.25)',
               borderRadius: 100,
               padding: '6px 16px',
               width: 320,
             }}>
-              <div style={{ width: 6, height: 6, borderRadius: 3, background: '#00c6ff' }} />
-              <span style={{ fontSize: 12, color: '#00c6ff', fontFamily: 'monospace', letterSpacing: '0.12em' }}>
+              <div style={{ width: 6, height: 6, borderRadius: 3, background: '#EE9427' }} />
+              <span style={{ fontSize: 12, color: '#EE9427', fontFamily: 'monospace', letterSpacing: '0.12em' }}>
                 DIGITAL CONSULTANT · DIGITAL NOMAD
               </span>
             </div>
@@ -127,7 +127,7 @@ export default async function Image() {
               <div style={{ display: 'flex', fontSize: 60, fontWeight: 800, lineHeight: 1.06, letterSpacing: '-0.03em', color: '#f0f0fa', margin: 0 }}>
                 Cybersecurity &amp;&nbsp;
                 <span style={{
-                  background: 'linear-gradient(135deg, #00c6ff 0%, #7b61ff 100%)',
+                  background: 'linear-gradient(135deg, #EE9427 0%, #4D9FDC 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                 }}>
@@ -149,10 +149,10 @@ export default async function Image() {
           {/* Bottom: Service chips (fixed row, no wrap) */}
           <div style={{ display: 'flex', gap: 10 }}>
             {[
-              { label: 'Cybersecurity',         color: 'rgba(0,198,255,0.12)',   border: 'rgba(0,198,255,0.3)'   },
-              { label: 'Blockchain Strategy',    color: 'rgba(123,97,255,0.12)', border: 'rgba(123,97,255,0.3)' },
-              { label: 'Web & Mobile PM',        color: 'rgba(0,255,170,0.08)',  border: 'rgba(0,255,170,0.25)' },
-              { label: 'Digital Transformation', color: 'rgba(255,179,64,0.08)', border: 'rgba(255,179,64,0.25)' },
+              { label: 'Cybersecurity',         color: 'rgba(238,148,39,0.12)',   border: 'rgba(238,148,39,0.3)'   },
+              { label: 'Blockchain Strategy',    color: 'rgba(77,159,220,0.12)', border: 'rgba(77,159,220,0.3)' },
+              { label: 'Web & Mobile PM',        color: 'rgba(127,184,232,0.08)',  border: 'rgba(127,184,232,0.25)' },
+              { label: 'Digital Transformation', color: 'rgba(247,183,102,0.08)', border: 'rgba(247,183,102,0.25)' },
             ].map(chip => (
               <div key={chip.label} style={{
                 background: chip.color,
@@ -174,7 +174,7 @@ export default async function Image() {
           position: 'absolute',
           bottom: 0, left: 0, right: 0,
           height: 3,
-          background: 'linear-gradient(90deg, #00c6ff 0%, #7b61ff 50%, #00ffaa 100%)',
+          background: 'linear-gradient(90deg, #EE9427 0%, #4D9FDC 50%, #7FB8E8 100%)',
         }} />
       </div>
     ),

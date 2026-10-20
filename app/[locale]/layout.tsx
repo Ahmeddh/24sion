@@ -6,7 +6,7 @@ import Script from 'next/script'
 import '../globals.css'
 import { Nav }    from '@/components/Nav'
 import { Footer } from '@/components/Footer'
-import { SITE }   from '@/lib/constants'
+import { SITE, IS_PRODUCTION } from '@/lib/constants'
 import { routing } from '@/i18n/routing'
 import { organizationSchema, personSchema, websiteSchema } from '@/lib/seo'
 import { ConsentBanner } from '@/components/consent/ConsentBanner'
@@ -43,10 +43,12 @@ export const metadata: Metadata = {
   authors:   [{ name: 'Ahmed Djobs', url: SITE.url }],
   creator:   'Ahmed Djobs',
   publisher: 'Ahmed Djobs',
-  robots: {
-    index: true, follow: true,
-    googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
-  },
+  robots: IS_PRODUCTION
+    ? {
+        index: true, follow: true,
+        googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
+      }
+    : { index: false, follow: false },
   openGraph: {
     type:        'website',
     url:          SITE.url,
