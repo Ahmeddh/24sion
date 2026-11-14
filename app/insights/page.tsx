@@ -10,11 +10,11 @@ export const metadata = buildMeta({
 })
 
 const tagColorMap: Record<string, string> = {
-  'Cybersecurity':              'text-cyan border-[rgba(0,198,255,0.25)] bg-[rgba(0,198,255,0.07)]',
-  'Blockchain':                 'text-purple border-[rgba(123,97,255,0.25)] bg-[rgba(123,97,255,0.07)]',
-  'Digital Product Management': 'text-[#00ffaa] border-[rgba(0,255,170,0.2)] bg-[rgba(0,255,170,0.06)]',
-  'Digital Strategy':           'text-[#ffb340] border-[rgba(255,179,64,0.2)] bg-[rgba(255,179,64,0.06)]',
-  'Web3':                       'text-purple border-[rgba(123,97,255,0.25)] bg-[rgba(123,97,255,0.07)]',
+  'Cybersecurity':              'text-cyan border-[rgba(238,148,39,0.25)] bg-[rgba(238,148,39,0.07)]',
+  'Blockchain':                 'text-purple border-[rgba(77,159,220,0.25)] bg-[rgba(77,159,220,0.07)]',
+  'Digital Product Management': 'text-[#7FB8E8] border-[rgba(127,184,232,0.2)] bg-[rgba(127,184,232,0.06)]',
+  'Digital Strategy':           'text-[#F7B766] border-[rgba(247,183,102,0.2)] bg-[rgba(247,183,102,0.06)]',
+  'Web3':                       'text-purple border-[rgba(77,159,220,0.25)] bg-[rgba(77,159,220,0.07)]',
 }
 
 const articles = [
@@ -118,7 +118,7 @@ export default function InsightsPage() {
           <p className="text-xs font-mono text-[#5a5a7a] tracking-widest uppercase mb-6">Featured</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {featured.map(post => {
-              const tc = tagColorMap[post.tag] ?? 'text-cyan border-[rgba(0,198,255,0.25)] bg-[rgba(0,198,255,0.07)]'
+              const tc = tagColorMap[post.tag] ?? 'text-cyan border-[rgba(238,148,39,0.25)] bg-[rgba(238,148,39,0.07)]'
               return (
                 <Link
                   key={post.slug}
@@ -154,7 +154,7 @@ export default function InsightsPage() {
           <p className="text-xs font-mono text-[#5a5a7a] tracking-widest uppercase mb-6">All Articles</p>
           <div className="flex flex-col gap-4">
             {rest.map(post => {
-              const tc = tagColorMap[post.tag] ?? 'text-cyan border-[rgba(0,198,255,0.25)] bg-[rgba(0,198,255,0.07)]'
+              const tc = tagColorMap[post.tag] ?? 'text-cyan border-[rgba(238,148,39,0.25)] bg-[rgba(238,148,39,0.07)]'
               return (
                 <Link
                   key={post.slug}

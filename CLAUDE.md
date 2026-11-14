@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```bash
 bun dev          # start dev server (Next.js, port 3000)
-bun build        # production build
+bun run build    # production build (plain `bun build` is Bun's bundler, not the Next.js build)
 bun lint         # ESLint
 ```
 

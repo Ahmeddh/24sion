@@ -67,7 +67,7 @@ export function LegalPageLayout({ title, lastUpdated, sections, locale }: Props)
                 </Link>
                 <a
                   href="mailto:contact@djobs.net"
-                  className="text-xs font-mono text-cyan hover:text-[#22d4ff] transition-colors"
+                  className="text-xs font-mono text-cyan hover:text-[#F7B766] transition-colors"
                 >
                   {contactLabel}
                 </a>

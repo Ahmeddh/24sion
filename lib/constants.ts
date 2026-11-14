@@ -1,6 +1,6 @@
 export const SITE = {
   name:        'Ahmed Djobs',
-  url:         'https://djobs.net',
+  url:         'https://24sion.com',
   title:       'Ahmed Djobs | Cybersecurity Advisor · Product Strategist · Blockchain Advisor',
   description: 'Ahmed Djobs is a senior digital consultant with 15+ years of enterprise delivery. Cybersecurity Advisor, Technical Product Strategist, and Blockchain Advisor for regulated industries, fintech, and government-scale organisations. Founder of Zero Bytes cybersecurity.',
   email:       'contact@djobs.net',
@@ -68,3 +68,7 @@ export const SERVICES = [
 ] as const
 
 export type ServiceColor = 'cyan' | 'purple' | 'green' | 'amber'
+
+/* True only on the production deployment (VERCEL_ENV=production) or a local production build */
+export const IS_PRODUCTION =
+  (process.env.VERCEL_ENV ?? (process.env.NODE_ENV === 'production' ? 'production' : 'development')) === 'production'

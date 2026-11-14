@@ -26,7 +26,7 @@ Built with Next.js 14 App Router, TypeScript, Tailwind CSS, next-intl (EN/AR), S
 
 ```bash
 bun dev          # start dev server → http://localhost:3000
-bun build        # production build
+bun run build    # production build (plain `bun build` is Bun's bundler, not the Next.js build)
 bun lint         # ESLint
 ```
 

@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "24sion.com",
+  "Id": "4687d9c2-fd66-4215-b075-3f92f4a2af2c"
+}

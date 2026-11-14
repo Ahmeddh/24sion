@@ -1,7 +1,8 @@
 import { MetadataRoute } from 'next'
-import { SITE } from '@/lib/constants'
+import { SITE, IS_PRODUCTION } from '@/lib/constants'
 
 export default function robots(): MetadataRoute.Robots {
+  if (!IS_PRODUCTION) return { rules: [{ userAgent: '*', disallow: '/' }] }
   return {
     rules: [
       {

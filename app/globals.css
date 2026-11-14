@@ -27,12 +27,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
-::selection { background: rgba(0,198,255,0.25); color: #fff; }
+::selection { background: rgba(238,148,39,0.25); color: #fff; }
 
 /* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: #080810; }
-::-webkit-scrollbar-thumb { background: #7b61ff; border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: #4D9FDC; border-radius: 4px; }
 
 /* ── Typography utilities ── */
 .font-sans  { font-family: var(--font-sans); }
@@ -41,22 +41,22 @@ body {
 
 /* ── Gradient text ── */
 .text-grad {
-  background: linear-gradient(135deg, #00c6ff, #7b61ff);
+  background: linear-gradient(135deg, #EE9427, #4D9FDC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 .text-grad-green {
-  background: linear-gradient(135deg, #00ffaa, #00c6ff);
+  background: linear-gradient(135deg, #7FB8E8, #EE9427);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 /* ── Glow effects ── */
-.glow-cyan   { box-shadow: 0 0 40px rgba(0,198,255,0.15); }
-.glow-purple { box-shadow: 0 0 40px rgba(123,97,255,0.15); }
-.text-glow-cyan { text-shadow: 0 0 20px rgba(0,198,255,0.5); }
+.glow-cyan   { box-shadow: 0 0 40px rgba(238,148,39,0.15); }
+.glow-purple { box-shadow: 0 0 40px rgba(77,159,220,0.15); }
+.text-glow-cyan { text-shadow: 0 0 20px rgba(238,148,39,0.5); }
 
 /* ── Noise texture overlay ── */
 .noise::after {
@@ -71,10 +71,10 @@ body {
 .prose-dark p   { font-family: var(--font-serif); font-size: 1.05rem; line-height: 1.85; color: #9898b8; margin-bottom: 1.4rem; }
 .prose-dark h2  { font-family: var(--font-serif); font-size: 1.55rem; font-weight: 600; color: #f0f0fa; margin: 3.2rem 0 1.1rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,0.06); }
 .prose-dark h3  { font-size: 1.1rem; font-weight: 700; color: #f0f0fa; margin: 2rem 0 0.8rem; }
-.prose-dark a   { color: #00c6ff; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(0,198,255,0.4); }
+.prose-dark a   { color: #EE9427; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(238,148,39,0.4); }
 .prose-dark ul  { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.4rem; }
 .prose-dark ul li { display: flex; align-items: flex-start; gap: 0.6rem; font-family: var(--font-serif); font-size: 1rem; line-height: 1.75; color: #9898b8; }
-.prose-dark ul li::before { content: '▸'; color: #00c6ff; font-size: 0.8rem; flex-shrink: 0; margin-top: 0.3rem; font-family: var(--font-sans); }
+.prose-dark ul li::before { content: '▸'; color: #EE9427; font-size: 0.8rem; flex-shrink: 0; margin-top: 0.3rem; font-family: var(--font-sans); }
 .prose-dark strong { color: #f0f0fa; font-family: var(--font-sans); font-weight: 600; }
 .prose-dark hr { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 2.5rem 0; }
 
@@ -82,7 +82,7 @@ body {
 #reading-progress {
   position: fixed; top: 0; left: 0; right: 0;
   height: 2px; z-index: 200;
-  background: linear-gradient(90deg, #00c6ff, #7b61ff);
+  background: linear-gradient(90deg, #EE9427, #4D9FDC);
   transform-origin: left;
   transform: scaleX(0);
   transition: transform 0.08s linear;
@@ -99,8 +99,8 @@ body {
 /* ── Cyber grid bg ── */
 .bg-cyber-grid {
   background-image:
-    linear-gradient(rgba(0,198,255,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,198,255,0.05) 1px, transparent 1px);
+    linear-gradient(rgba(238,148,39,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(238,148,39,0.05) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
@@ -175,14 +175,14 @@ canvas#hero-canvas {
 
 /* ── Focus glow ── */
 :focus-visible {
-  outline: 2px solid rgba(0,198,255,0.55);
+  outline: 2px solid rgba(238,148,39,0.55);
   outline-offset: 3px;
   border-radius: 4px;
 }
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 2px solid rgba(0,198,255,0.45);
+  outline: 2px solid rgba(238,148,39,0.45);
   outline-offset: 1px;
   border-radius: 6px;
 }

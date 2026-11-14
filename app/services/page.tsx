@@ -30,7 +30,7 @@ const services = [
   {
     id: 'digital' as const,
     num: '01',
-    color: { accent: 'text-[#ffb340]', border: 'border-[rgba(255,179,64,0.18)]', glow: 'shadow-[0_0_40px_rgba(255,179,64,0.06)]', badge: 'bg-[rgba(255,179,64,0.08)] text-[#ffb340] border-[rgba(255,179,64,0.2)]', hr: 'bg-[#ffb340]', bullet: 'bg-[#ffb340]' },
+    color: { accent: 'text-[#F7B766]', border: 'border-[rgba(247,183,102,0.18)]', glow: 'shadow-[0_0_40px_rgba(247,183,102,0.06)]', badge: 'bg-[rgba(247,183,102,0.08)] text-[#F7B766] border-[rgba(247,183,102,0.2)]', hr: 'bg-[#F7B766]', bullet: 'bg-[#F7B766]' },
     title: 'Digital Strategy & Transformation',
     tagline: 'Architecture for Resilient, Scalable Digital Systems',
     seoHeadline: 'Digital Transformation Consulting for Forward-Thinking Organizations',
@@ -63,7 +63,7 @@ const services = [
   {
     id: 'webmobile' as const,
     num: '02',
-    color: { accent: 'text-[#00ffaa]', border: 'border-[rgba(0,255,170,0.18)]', glow: 'shadow-[0_0_40px_rgba(0,255,170,0.06)]', badge: 'bg-[rgba(0,255,170,0.08)] text-[#00ffaa] border-[rgba(0,255,170,0.2)]', hr: 'bg-[#00ffaa]', bullet: 'bg-[#00ffaa]' },
+    color: { accent: 'text-[#7FB8E8]', border: 'border-[rgba(127,184,232,0.18)]', glow: 'shadow-[0_0_40px_rgba(127,184,232,0.06)]', badge: 'bg-[rgba(127,184,232,0.08)] text-[#7FB8E8] border-[rgba(127,184,232,0.2)]', hr: 'bg-[#7FB8E8]', bullet: 'bg-[#7FB8E8]' },
     title: 'Web & Mobile Digital Product Management',
     tagline: 'Technical Leadership for Complex Digital Products',
     seoHeadline: 'Senior Digital Product Manager for Web & Mobile Delivery',
@@ -96,7 +96,7 @@ const services = [
   {
     id: 'cybersecurity' as const,
     num: '03',
-    color: { accent: 'text-cyan', border: 'border-[rgba(0,198,255,0.2)]', glow: 'shadow-[0_0_40px_rgba(0,198,255,0.08)]', badge: 'bg-[rgba(0,198,255,0.1)] text-cyan border-[rgba(0,198,255,0.25)]', hr: 'bg-cyan', bullet: 'bg-cyan' },
+    color: { accent: 'text-cyan', border: 'border-[rgba(238,148,39,0.2)]', glow: 'shadow-[0_0_40px_rgba(238,148,39,0.08)]', badge: 'bg-[rgba(238,148,39,0.1)] text-cyan border-[rgba(238,148,39,0.25)]', hr: 'bg-cyan', bullet: 'bg-cyan' },
     title: 'Cybersecurity Consulting',
     tagline: 'Audit, Harden & Defend Your Digital Infrastructure',
     seoHeadline: 'Fractional CISO & Cybersecurity Advisory for Modern Organizations',
@@ -129,7 +129,7 @@ const services = [
   {
     id: 'blockchain' as const,
     num: '04',
-    color: { accent: 'text-purple', border: 'border-[rgba(123,97,255,0.2)]', glow: 'shadow-[0_0_40px_rgba(123,97,255,0.08)]', badge: 'bg-[rgba(123,97,255,0.1)] text-purple border-[rgba(123,97,255,0.25)]', hr: 'bg-purple', bullet: 'bg-purple' },
+    color: { accent: 'text-purple', border: 'border-[rgba(77,159,220,0.2)]', glow: 'shadow-[0_0_40px_rgba(77,159,220,0.08)]', badge: 'bg-[rgba(77,159,220,0.1)] text-purple border-[rgba(77,159,220,0.25)]', hr: 'bg-purple', bullet: 'bg-purple' },
     title: 'Blockchain Consultancy',
     tagline: 'Strategy, Architecture & Web3 Advisory',
     seoHeadline: 'Enterprise Blockchain Strategy & Web3 Product Advisory',

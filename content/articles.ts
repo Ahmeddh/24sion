@@ -6,6 +6,12 @@
 export interface Article {
   title:      string
   excerpt:    string
+  /* SEO overrides: keep seoTitle under ~45 chars and seoDescription under ~155 */
+  seoTitle?:       string
+  seoDescription?: string
+  /* Social share image (1200x630, path under /public) and its alt text */
+  image?:          string
+  imageAlt?:       string
   tag:        string
   tagColor:   'cyan' | 'purple' | 'green' | 'amber'
   date:       string
@@ -26,8 +32,10 @@ export const articles: Record<string, Article> = {
 
   /* ── 0 ──────────────────────────────────────────────────── */
   'bitcoin-treasury-companies-leverage-risk': {
-    title:    'Bitcoin Treasury Companies: The Leverage Risk Hiding Inside the Saylor Model',
-    excerpt:  'Public companies now hold roughly 6% of all bitcoin, and most of it was bought with borrowed money and preferred dividends that have to be paid in dollars. In 2026 the flywheel started spinning backwards. Here is how the leverage actually works, what it puts at risk, and the seven questions worth asking about any treasury company.',
+    title:    'Bitcoin Treasury Companies: The Hidden Leverage Risk Behind the Saylor Model',
+    excerpt:  'Public companies hold roughly 6% of all bitcoin, much of it bought with debt. In 2026 the flywheel started spinning backwards. Here is how the leverage works and what to ask before you trust it.',
+    seoTitle:  'Bitcoin Treasury Company Risk Explained',
+    seoDescription: 'Public companies hold about 6% of all bitcoin, much of it bought with debt. How treasury company leverage works, what it puts at risk, and 7 questions to ask.',
     tag:      'Web3',
     tagColor: 'purple',
     date:     '2026-09-05',
@@ -151,8 +159,12 @@ This is analysis, not financial advice. Do your own research and manage your own
 
   /* ── 1 ──────────────────────────────────────────────────── */
   'bitcoin-200-week-ma-dca-plan': {
-    title:    'The 200-Week Moving Average: Bitcoin\'s Long-Term Compass (and My DCA Plan)',
-    excerpt:  'Bitcoin has pulled back from its cycle high near $125K and is retesting the 200-week moving average. Instead of guessing the bottom, here is a tiered dollar-cost-averaging plan with charted zones, Fibonacci-mapped targets, and a clear invalidation level.',
+    title:    'How to Buy Bitcoin With the 200-Week Moving Average: A Free DCA Plan',
+    excerpt:  'Inflation keeps shrinking what your savings can buy. This is the free plan I use to buy Bitcoin in stages: three buy zones, five targets, and the exact price that proves me wrong.',
+    seoTitle:  'Bitcoin 200-Week MA DCA Plan: Zones and Exit',
+    seoDescription: 'A free Bitcoin DCA plan built on the 200-week moving average: 3 buy zones, 5 price targets and the exit level that proves the plan wrong. Not financial advice.',
+    image:     '/og/btc-200wma-plan.png',
+    imageAlt:  'Bitcoin 200-week moving average DCA plan showing three buy zones, five targets and the invalidation level',
     tag:      'Web3',
     tagColor: 'purple',
     date:     '2026-07-13',
@@ -241,8 +253,10 @@ Tiered DCA accepts that uncertainty instead of pretending it away. You buy more 
 
   /* ── 2 ──────────────────────────────────────────────────── */
   'zero-trust-architecture': {
-    title:    'Zero Trust Architecture: Why Perimeter Security Is Dead',
-    excerpt:  "Your network perimeter is already gone. Zero Trust is the only architecture built for a world where the attacker is already inside. Here's how to actually implement it.",
+    title:    'Zero Trust Architecture: Why Perimeter Security Is Dead and What to Build Instead',
+    excerpt:  'Your network perimeter is already gone, and attackers know it. Here is how to build Zero Trust step by step, so one stolen password cannot take down your business.',
+    seoTitle:  'Zero Trust Architecture: A Practical Guide',
+    seoDescription: 'A practical Zero Trust architecture guide: why perimeter security fails and how to build identity-first defense, step by step.',
     tag:      'Cybersecurity',
     tagColor: 'cyan',
     date:     '2026-05-01',
@@ -330,8 +344,10 @@ The perimeter is gone. Zero Trust, done properly, is actually more effective aga
 
   /* ── 3 ──────────────────────────────────────────────────── */
   'blockchain-enterprise-myths': {
-    title:    'The 5 Blockchain Enterprise Myths That Are Costing You Deals',
-    excerpt:  "Blockchain has been oversold for a decade. Misaligned expectations have burned serious money and derailed real projects. Here's a first-principles look at what's real and what isn't.",
+    title:    '5 Blockchain Myths That Cost Enterprise Teams Deals (and What Is True)',
+    excerpt:  'Blockchain has been oversold for a decade. Here are the five myths that derail enterprise projects, and where the real value lives.',
+    seoTitle:  '5 Enterprise Blockchain Myths, Debunked',
+    seoDescription: 'Five enterprise blockchain myths that derail projects and lose deals, debunked from first principles, plus where blockchain actually creates value.',
     tag:      'Blockchain',
     tagColor: 'purple',
     date:     '2026-04-15',
@@ -421,8 +437,10 @@ Go in with clear eyes. Design for the constraints rather than pretending they do
 
   /* ── 4 ──────────────────────────────────────────────────── */
   'pm-security-first': {
-    title:    "Security-First Product Delivery: A PM's Framework",
-    excerpt:  'Security issues found in production cost 10-15x more to fix than ones caught in design. Here is how product managers embed security into sprint cycles without killing velocity.',
+    title:    'Security-First Product Delivery: A Framework for Product Managers',
+    excerpt:  'A flaw found in production costs many times more than one caught in design. This framework helps product managers build security in from day one.',
+    seoTitle:  'Security-First Product Management Framework',
+    seoDescription: 'A security-first product delivery framework for product managers: catch flaws in design, not production, and ship with fewer surprises.',
     tag:      'Digital Product Management',
     tagColor: 'green',
     date:     '2026-04-05',
@@ -498,8 +516,10 @@ Security-first delivery isn't about slowing down. It's about not going back. Tea
 
   /* ── 5 ──────────────────────────────────────────────────── */
   'defi-risk-assessment': {
-    title:    'DeFi Risk Assessment: What Institutional Investors Actually Need to Know',
-    excerpt:  'Smart contract exploits, oracle manipulation, liquidity crises. A structured framework for evaluating DeFi protocol exposure before you commit serious capital.',
+    title:    'DeFi Risk Assessment: A 5-Layer Framework for Institutional Investors',
+    excerpt:  'Smart contract bugs, oracle manipulation, liquidity crunches. Use this five-layer framework to measure your DeFi exposure before you deploy capital.',
+    seoTitle:  'DeFi Risk Assessment: 5-Layer Framework',
+    seoDescription: 'A five-layer DeFi risk assessment framework for institutional investors: smart contract, oracle, liquidity and more, before you deploy capital.',
     tag:      'Web3',
     tagColor: 'purple',
     date:     '2026-03-20',
@@ -604,8 +624,10 @@ DeFi risk is manageable. It requires a different framework than traditional fina
 
   /* ── 6 ──────────────────────────────────────────────────── */
   'digital-transformation-failure': {
-    title:    "Why 70% of Digital Transformations Fail: The 3 Patterns That Predict It",
-    excerpt:  "After years advising transformation programs, certain failure patterns show up every time. Most have nothing to do with technology. Everything to do with decisions made in the first 90 days.",
+    title:    'Why 70% of Digital Transformations Fail: 3 Patterns That Predict It',
+    excerpt:  'After years inside transformation programs, the same failure patterns keep showing up. Most have nothing to do with technology.',
+    seoTitle:  'Why Digital Transformations Fail: 3 Patterns',
+    seoDescription: 'Why 70% of digital transformation programs fail, and the three recurring patterns that predict it before the budget is spent.',
     tag:      'Digital Strategy',
     tagColor: 'amber',
     date:     '2026-02-28',
@@ -677,8 +699,10 @@ Digital transformation is hard. The 70% failure rate isn't going to drop until o
 
   /* ── 7 ──────────────────────────────────────────────────── */
   'smart-contract-security': {
-    title:    "Smart Contract Security: A Non-Developer's Guide to What Goes Wrong",
-    excerpt:  "You don't need to read Solidity to understand the attack surfaces that have cost DeFi billions. A plain-language breakdown of the most exploited vulnerabilities and what they mean for your project.",
+    title:    'Smart Contract Security for Non-Developers: What Actually Goes Wrong',
+    excerpt:  'You do not need to read Solidity to understand the attacks that cost DeFi billions. Here are the most common vulnerabilities in plain language.',
+    seoTitle:  'Smart Contract Security for Non-Developers',
+    seoDescription: 'Smart contract security explained for non-developers: the most common vulnerabilities in plain language, and how to spot the risk.',
     tag:      'Blockchain',
     tagColor: 'purple',
     date:     '2026-01-22',
@@ -777,8 +801,10 @@ The answers to these questions tell you more about the security posture of a pro
 
   /* ── 8 ──────────────────────────────────────────────────── */
   'ciso-fractional': {
-    title:    'Why Your Startup Needs a Fractional CISO (Not Just a Security Checklist)',
-    excerpt:  "A compliance checklist won't protect you from a sophisticated attacker. Here's what strategic security leadership actually looks like for a high-growth startup, and why most founders get this completely wrong.",
+    title:    'Why Your Startup Needs a Fractional CISO, Not Just a Security Checklist',
+    excerpt:  'A checklist tells you what to check. A fractional CISO tells you what matters and what a breach would cost your business.',
+    seoTitle:  'Fractional CISO for Startups: Why You Need One',
+    seoDescription: 'Why a growing startup needs a fractional CISO instead of a compliance checklist, and what real security leadership looks like.',
     tag:      'Cybersecurity',
     tagColor: 'cyan',
     date:     '2025-12-10',
@@ -846,8 +872,10 @@ Security checklists tell you what boxes to check. A fractional CISO tells you wh
 
   /* ── 9 ──────────────────────────────────────────────────── */
   'agile-technical-pm': {
-    title:    'The Technical PM Advantage: Why Engineering Background Changes Everything',
-    excerpt:  "A product manager who can reason about architecture operates on a fundamentally different level. Here's what separates technical PMs from traditional ones and why the gap keeps widening.",
+    title:    'The Technical Product Manager Advantage: Why an Engineering Background Changes Everything',
+    excerpt:  'A product manager who can reason about architecture works at a different level. Here is how the gap between technical and non-technical PMs keeps widening.',
+    seoTitle:  'Technical Product Manager Advantage',
+    seoDescription: 'Why technical product managers outperform: how an engineering background changes roadmaps, trade-offs and delivery.',
     tag:      'Digital Product Management',
     tagColor: 'green',
     date:     '2025-11-18',

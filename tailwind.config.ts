@@ -14,10 +14,10 @@ const config: Config = {
         elevated:    '#141428',
         card:        '#1a1a30',
         'card-hover':'#1f1f38',
-        cyan:        '#00c6ff',
-        purple:      '#7b61ff',
-        green:       '#00ffaa',
-        amber:       '#ffb83f',
+        cyan:        '#EE9427',
+        purple:      '#4D9FDC',
+        green:       '#7FB8E8',
+        amber:       '#F7B766',
         rose:        '#ff6b9d',
         'text-primary':   '#f0f0fa',
         'text-secondary': '#9898b8',
@@ -33,11 +33,11 @@ const config: Config = {
       maxWidth: { 'read': '680px', 'site': '1200px' },
       backgroundImage: {
         'grid-cyan': `
-          linear-gradient(rgba(0,198,255,0.05) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(0,198,255,0.05) 1px, transparent 1px)
+          linear-gradient(rgba(238,148,39,0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(238,148,39,0.05) 1px, transparent 1px)
         `,
-        'grad-hero': 'radial-gradient(ellipse 80% 60% at 50% -10%, rgba(0,198,255,0.1) 0%, transparent 60%)',
-        'grad-cta':  'radial-gradient(ellipse 70% 60% at 50% 50%, rgba(0,198,255,0.07) 0%, transparent 60%)',
+        'grad-hero': 'radial-gradient(ellipse 80% 60% at 50% -10%, rgba(238,148,39,0.1) 0%, transparent 60%)',
+        'grad-cta':  'radial-gradient(ellipse 70% 60% at 50% 50%, rgba(238,148,39,0.07) 0%, transparent 60%)',
       },
       backgroundSize: { 'grid': '48px 48px' },
       animation: {
@@ -60,8 +60,8 @@ const config: Config = {
         },
       },
       boxShadow: {
-        'glow-cyan':   '0 0 40px rgba(0,198,255,0.15)',
-        'glow-purple': '0 0 40px rgba(123,97,255,0.15)',
+        'glow-cyan':   '0 0 40px rgba(238,148,39,0.15)',
+        'glow-purple': '0 0 40px rgba(77,159,220,0.15)',
         'card':        '0 4px 24px rgba(0,0,0,0.4)',
         'card-hover':  '0 8px 40px rgba(0,0,0,0.5)',
       },

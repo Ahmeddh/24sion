@@ -70,7 +70,7 @@ export async function Footer({ locale }: Props) {
                   href={href}
                   target={href.startsWith('mailto') ? undefined : '_blank'}
                   rel={href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
-                  className="w-9 h-9 rounded-[9px] bg-[#141428] border border-[rgba(255,255,255,0.09)] flex items-center justify-center text-[#5a5a7a] hover:text-cyan hover:border-[rgba(0,198,255,0.3)] transition-all"
+                  className="w-9 h-9 rounded-[9px] bg-[#141428] border border-[rgba(255,255,255,0.09)] flex items-center justify-center text-[#5a5a7a] hover:text-cyan hover:border-[rgba(238,148,39,0.3)] transition-all"
                   aria-label={label}
                 >
                   <Icon size={size} />
@@ -127,14 +127,14 @@ export async function Footer({ locale }: Props) {
                 </a>
               </li>
               <li>
-                <a href={SITE.cal} target="_blank" rel="noopener noreferrer" className="text-[0.875rem] text-cyan font-semibold hover:text-[#22d4ff] transition-colors">
+                <a href={SITE.cal} target="_blank" rel="noopener noreferrer" className="text-[0.875rem] text-cyan font-semibold hover:text-[#F7B766] transition-colors">
                   {t('bookSession')}
                 </a>
               </li>
             </ul>
             <div className="mt-1">
               <p className="text-[0.6rem] font-mono text-[#6e6e8e] tracking-widest uppercase mb-2">{t('scanQr')}</p>
-              <div className="inline-block rounded-lg overflow-hidden border border-[rgba(0,198,255,0.2)] p-1.5 bg-[#0a0a18]">
+              <div className="inline-block rounded-lg overflow-hidden border border-[rgba(238,148,39,0.2)] p-1.5 bg-[#0a0a18]">
                 <ContactQR size={100} />
               </div>
             </div>

@@ -282,7 +282,7 @@ L 783.399324 58.630506
 L 783.399324 54.459604 
 L 49.408594 54.459604 
 z
-" clip-path="url(#p8c4b835e3b)" style="fill: #ff5470; opacity: 0.18; stroke: #ff5470; stroke-linejoin: miter"/>
+" clip-path="url(#p8c4b835e3b)" style="fill: #F7B766; opacity: 0.18; stroke: #F7B766; stroke-linejoin: miter"/>
    </g>
    <g id="LineCollection_1">
     <path d="M 49.408594 411.256108 
@@ -302,37 +302,37 @@ L 783.399324 455.037969
    <g id="LineCollection_2">
     <path d="M 49.408594 164.495703 
 L 783.399324 164.495703 
-" clip-path="url(#p8c4b835e3b)" style="fill: none; stroke-dasharray: 7.8,5.2; stroke-dashoffset: 0; stroke: #00ffaa; stroke-width: 1.3"/>
+" clip-path="url(#p8c4b835e3b)" style="fill: none; stroke-dasharray: 7.8,5.2; stroke-dashoffset: 0; stroke: #4D9FDC; stroke-width: 1.3"/>
    </g>
    <g id="text_16">
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #00ffaa" x="55.626345" y="160.704966" transform="rotate(-0 55.626345 160.704966)">$106K · reclaim (0.702 retrace of the correction)</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #4D9FDC" x="55.626345" y="160.704966" transform="rotate(-0 55.626345 160.704966)">$106K · reclaim (0.702 retrace of the correction)</text>
    </g>
    <g id="LineCollection_3">
     <path d="M 49.408594 143.351529 
 L 783.399324 143.351529 
-" clip-path="url(#p8c4b835e3b)" style="fill: none; stroke-dasharray: 7.8,5.2; stroke-dashoffset: 0; stroke: #00ffaa; stroke-width: 1.3"/>
+" clip-path="url(#p8c4b835e3b)" style="fill: none; stroke-dasharray: 7.8,5.2; stroke-dashoffset: 0; stroke: #4D9FDC; stroke-width: 1.3"/>
    </g>
    <g id="text_17">
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #00ffaa" x="55.626345" y="139.560792" transform="rotate(-0 55.626345 139.560792)">$125K · prior ATH retest (full retrace)</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #4D9FDC" x="55.626345" y="139.560792" transform="rotate(-0 55.626345 139.560792)">$125K · prior ATH retest (full retrace)</text>
    </g>
    <g id="LineCollection_4">
     <path d="M 49.408594 101.675088 
 L 783.399324 101.675088 
-" clip-path="url(#p8c4b835e3b)" style="fill: none; stroke-dasharray: 7.8,5.2; stroke-dashoffset: 0; stroke: #ffb340; stroke-width: 1.3"/>
+" clip-path="url(#p8c4b835e3b)" style="fill: none; stroke-dasharray: 7.8,5.2; stroke-dashoffset: 0; stroke: #EE9427; stroke-width: 1.3"/>
    </g>
    <g id="text_18">
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #ffb340" x="55.626345" y="97.884351" transform="rotate(-0 55.626345 97.884351)">$173K · primary target (1.0 trend-based extension from the correction low)</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #EE9427" x="55.626345" y="97.884351" transform="rotate(-0 55.626345 97.884351)">$173K · primary target (1.0 trend-based extension from the correction low)</text>
    </g>
    <g id="LineCollection_5">
     <path d="M 49.408594 76.210133 
 L 783.399324 76.210133 
-" clip-path="url(#p8c4b835e3b)" style="fill: none; stroke-dasharray: 7.8,5.2; stroke-dashoffset: 0; stroke: #ffb340; stroke-width: 1.3"/>
+" clip-path="url(#p8c4b835e3b)" style="fill: none; stroke-dasharray: 7.8,5.2; stroke-dashoffset: 0; stroke: #EE9427; stroke-width: 1.3"/>
    </g>
    <g id="text_19">
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #ffb340" x="55.626345" y="72.419396" transform="rotate(-0 55.626345 72.419396)">$211K · extended (3.618 fib extension)</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #EE9427" x="55.626345" y="72.419396" transform="rotate(-0 55.626345 72.419396)">$211K · extended (3.618 fib extension)</text>
    </g>
    <g id="text_20">
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #ff5470" x="55.626345" y="53.437734" transform="rotate(-0 55.626345 53.437734)">$242K–250K · blow-off zone (4.236 ext, where the 2021 cycle topped ~4.0×)</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #F7B766" x="55.626345" y="53.437734" transform="rotate(-0 55.626345 53.437734)">$242K–250K · blow-off zone (4.236 ext, where the 2021 cycle topped ~4.0×)</text>
    </g>
    <g id="text_21">
     <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6e6e8e" x="55.626345" y="427.827872" transform="rotate(-0 55.626345 427.827872)">2022 low $15.5K · fib anchor 0</text>
@@ -636,7 +636,7 @@ L 635.949794 209.980612
 L 638.022378 229.096476 
 L 640.094962 233.676934 
 L 640.094962 233.676934 
-" clip-path="url(#p8c4b835e3b)" style="fill: none; stroke: #00c6ff; stroke-width: 1.8; stroke-linecap: square"/>
+" clip-path="url(#p8c4b835e3b)" style="fill: none; stroke: #7FB8E8; stroke-width: 1.8; stroke-linecap: square"/>
    </g>
   </g>
  </g>
