@@ -23,6 +23,7 @@ export function Nav({ locale }: Props) {
     { href: `/${locale}/about`,     label: t('about')    },
     { href: `/${locale}/services`,  label: t('services') },
     { href: `/${locale}/insights`,  label: t('insights') },
+    { href: `/${locale}/dca-calculator`, label: t('calculator') },
     { href: `/${locale}/projects`,  label: t('projects') },
   ]
 

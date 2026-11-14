@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       { url: `${base}/${locale}/services`,                lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.95, alternates: alternates('/services') },
       { url: `${base}/${locale}/about`,                   lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9,  alternates: alternates('/about') },
       { url: `${base}/${locale}/projects`,                lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.85, alternates: alternates('/projects') },
+      { url: `${base}/${locale}/dca-calculator`,          lastModified: new Date(), changeFrequency: 'weekly'  as const, priority: 0.9,  alternates: alternates('/dca-calculator') },
       { url: `${base}/${locale}/insights`,                lastModified: new Date(), changeFrequency: 'weekly'  as const, priority: 0.85, alternates: alternates('/insights') },
       { url: `${base}/${locale}/privacy-policy`,          lastModified: new Date(), changeFrequency: 'yearly'  as const, priority: 0.3,  alternates: alternates('/privacy-policy') },
       { url: `${base}/${locale}/terms-and-conditions`,    lastModified: new Date(), changeFrequency: 'yearly'  as const, priority: 0.3,  alternates: alternates('/terms-and-conditions') },

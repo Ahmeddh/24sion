@@ -6,6 +6,8 @@ import { buildMeta } from '@/lib/seo'
 import { articles, type Article } from '@/content/articles'
 import { articlesAr } from '@/content/articlesAr'
 import { SERVICES, SITE } from '@/lib/constants'
+import { LeadMagnetButton } from '@/components/lead/LeadMagnet'
+import { PLAN_ARTICLE_SLUG } from '@/lib/plan'
 import { PageMotion } from '@/components/layout/PageMotion'
 import { FadeIn, MotionSection } from '@/components/motion'
 import {
@@ -122,11 +124,12 @@ function HomeContent({ locale }: { locale: string }) {
 
           <FadeIn delay={0.38}>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <BookButton size="xl" />
-              <CTAButton href={`/${locale}/services`} variant="ghost" size="xl">
+              <LeadMagnetButton source="home-hero" size="xl">{t('ctaPrimary')}</LeadMagnetButton>
+              <CTAButton href={`/${locale}/insights/${PLAN_ARTICLE_SLUG}`} variant="ghost" size="xl">
                 {t('ctaSecondary')}
               </CTAButton>
             </div>
+            <p className="mt-4 text-xs text-[#5a5a7a]">{t('heroNote')}</p>
           </FadeIn>
 
           <FadeIn delay={0.48}>

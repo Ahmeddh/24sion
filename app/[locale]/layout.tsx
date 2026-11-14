@@ -11,6 +11,7 @@ import { routing } from '@/i18n/routing'
 import { organizationSchema, personSchema, websiteSchema } from '@/lib/seo'
 import { ConsentBanner } from '@/components/consent/ConsentBanner'
 import { ScrollToTop } from '@/components/ui/ScrollToTop'
+import { LeadMagnetProvider } from '@/components/lead/LeadMagnet'
 
 // Set per site in Vercel (Production only). Empty on previews and locally, so no tracking there.
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID
@@ -150,11 +151,13 @@ export default async function LocaleLayout({ children, params }: Props) {
         )}
 
         <NextIntlClientProvider messages={messages}>
-          <Nav locale={locale} />
-          <main className="pt-16">
-            {children}
-          </main>
-          <Footer locale={locale} />
+          <LeadMagnetProvider>
+            <Nav locale={locale} />
+            <main className="pt-16">
+              {children}
+            </main>
+            <Footer locale={locale} />
+          </LeadMagnetProvider>
         </NextIntlClientProvider>
         <ConsentBanner />
         <ScrollToTop />
